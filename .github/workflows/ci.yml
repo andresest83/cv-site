@@ -1,0 +1,57 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    env:
+      PUPPETEER_SKIP_DOWNLOAD: 'false'
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Install pyftsubset for font subsetting
+        run: pip install fonttools brotli
+
+      - name: Security audit
+        run: npm audit --omit=dev
+
+      - name: Lint JS
+        run: npx eslint .
+
+      - name: Lint CSS
+        run: npx stylelint "css/**/*.css"
+
+      - name: Build & smoke tests
+        run: npm test
+
+      - name: Unit tests
+        run: npm run test:unit
+
+      - name: HTML validation
+        run: npm run validate
+
+      - name: Install Chromium dependencies
+        run: npx puppeteer browsers install chrome
+
+      - name: E2E tests
+        run: npm run test:e2e
+
+  # Deploy is added in phase 3 (ci/cloudflare-workers).
+  #
+  # Upstream's deploy job checked out the author's private data repo over an SSH
+  # deploy key and pushed to Cloudflare Pages. Neither applies here: content lives
+  # in this repo, and the site runs on Workers Static Assets. Removed rather than
+  # carried, so CI has no dependency on another person's repository.

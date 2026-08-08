@@ -1,0 +1,41 @@
+<section id="skills" class="section">
+  <h2 class="section-title">{{t "skills"}}</h2>
+
+  <div class="skills-filter-container">
+    <div class="skills-search-box">
+      <i class="fa-solid fa-search"></i>
+      <label for="skillsSearch" class="sr-only">{{t "searchSkills"}}</label>
+      <input type="text" id="skillsSearch" placeholder="{{t "searchSkills"}}" />
+      <button type="button" id="clearSearch" class="clear-search" aria-label="Clear search">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <div class="skills-category-filters">
+      <button type="button" class="category-filter-btn active" data-category="all" title="All Skills" aria-label="All Skills">
+        <i class="fa-solid fa-grip"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="skills-grid">
+    {{#each skills}}
+    <div class="skill-category color-{{color}}{{#unless featured}} skills-extra{{/unless}}" data-featured="{{#if featured}}true{{else}}false{{/if}}">
+      <h3 class="skill-category-title">
+        <i class="{{icon}}"></i> {{title}}
+      </h3>
+      <ul class="skill-tags">
+        {{#each tags}}
+        <li class="skill-tag">{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="skills-toggle-container">
+    <button type="button" class="skills-show-all-btn" id="skillsShowAll" aria-expanded="false">
+      <i class="fa-solid fa-chevron-down"></i>
+      <span>{{t "showAllSkills"}}</span>
+    </button>
+  </div>
+</section>

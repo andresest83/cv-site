@@ -1,0 +1,13 @@
+{
+  // Cloudflare Workers Static Assets.
+  //
+  // No `routes` block on purpose: the custom domain cv.andresestupinan.dev is
+  // attached once by hand in the dashboard, which lets Cloudflare create the DNS
+  // record itself. Keeping it out of config means the CI token needs no Zone
+  // permissions at all — only Account > Workers Scripts > Edit.
+  "name": "cv-site",
+  "compatibility_date": "2026-08-07",
+  "assets": {
+    "directory": "./dist"
+  }
+}
