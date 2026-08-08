@@ -13,7 +13,7 @@ export function initPrintHandler() {
   if (!modal || !downloadBtn || !printBtn || !closeBtn) return;
 
   const pdfUrl =
-    modal.getAttribute('data-pdf-url') || '/files/CV_Rostyslav_Fridman.pdf';
+    modal.getAttribute('data-pdf-url') || '/files/CV_Andres_Estupinan.pdf';
 
   let previousFocus = null;
 

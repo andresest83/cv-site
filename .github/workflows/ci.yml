@@ -49,48 +49,9 @@ jobs:
       - name: E2E tests
         run: npm run test:e2e
 
-  deploy:
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    env:
-      CV_DATA_DIR: data-private/data
-      CV_IMAGES_DIR: data-private/images
-      CV_ASSETS_DIR: data-private/assets
-    steps:
-      - uses: actions/checkout@v6
-
-      - uses: actions/checkout@v6
-        with:
-          repository: frostyslav/personal-cv-data
-          ssh-key: ${{ secrets.DATA_REPO_KEY }}
-          path: data-private
-
-      - uses: actions/setup-node@v6
-        with:
-          node-version-file: '.nvmrc'
-          cache: 'npm'
-
-      - run: npm ci
-
-      - name: Install pyftsubset for font subsetting
-        run: pip install fonttools brotli
-
-      - name: Build
-        run: npm run build
-
-      - name: Install Chromium for PDF generation
-        run: npx puppeteer browsers install chrome
-
-      - name: Generate PDF
-        run: node scripts/generate-pdf.js
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=${{ vars.CLOUDFLARE_PROJECT_NAME }}
+  # Deploy is added in phase 3 (ci/cloudflare-workers).
+  #
+  # Upstream's deploy job checked out the author's private data repo over an SSH
+  # deploy key and pushed to Cloudflare Pages. Neither applies here: content lives
+  # in this repo, and the site runs on Workers Static Assets. Removed rather than
+  # carried, so CI has no dependency on another person's repository.

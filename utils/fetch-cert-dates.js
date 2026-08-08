@@ -100,7 +100,7 @@ async function fetchDate(browser, badge) {
       return el ? el.textContent.trim() : null;
     });
 
-    // Extract date from text like "Issued to Rostyslav Fridman on January 15, 2024"
+    // Extract date from text like "Issued to Jane Doe on January 15, 2024"
     const match = dateText?.match(/on\s+(.+)$/i);
     const date = match ? match[1].trim() : dateText;
 
