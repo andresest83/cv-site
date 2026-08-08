@@ -1,0 +1,90 @@
+defaultLocale: en
+locales: [en, de]
+
+en:
+  lang: en
+  langLabel: EN
+  altLang: de
+  altLangLabel: DE
+  altLangUrl: /de/
+  summary: Summary
+  experience: Experience
+  education: Education
+  skills: Skills
+  certifications: Certifications
+  projectOverview: Project Overview
+  teamFocus: Team Focus
+  roleFocus: Role Focus
+  resultsImpact: Results & Impact
+  earlierCareer: Earlier Career
+  issued: 'Issued:'
+  project: 'Project:'
+  searchSkills: 'Search skills...'
+  showAllSkills: Show all skills
+  downloadPdf: PDF
+  downloadPdfLong: Download PDF
+  dark: Dark
+  light: Light
+  switchToDark: Switch to dark mode
+  switchToLight: Switch to light mode
+  skipToContent: Skip to content
+  backToTop: Back to top
+  technologiesUsed: Technologies used
+  projects: Projects & Speaking
+  projectsList: Open Source & Projects
+  community: Conference Speaking
+  printOrDownload: Print or Download
+  printOrDownloadDesc: How would you like to get this CV?
+  printPage: Print Page
+  footerText: >-
+    Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>P</kbd> for an ATS-friendly printout, or
+  footerDownload: download the PDF
+  footerCredly: Certification badges verify on
+  metaDescription: >-
+    CV of {{name}} — {{title}} with {{years}}+ years of experience in software engineering, web applications, and distributed systems.
+  ogDescription: >-
+    Professional CV — {{years}}+ years in software engineering, full-stack development, and cloud-native applications.
+
+de:
+  lang: de
+  langLabel: DE
+  altLang: en
+  altLangLabel: EN
+  altLangUrl: /
+  summary: Zusammenfassung
+  experience: Berufserfahrung
+  education: Ausbildung
+  skills: Fähigkeiten
+  certifications: Zertifizierungen
+  projectOverview: Projektübersicht
+  teamFocus: Team-Fokus
+  roleFocus: Rollen-Fokus
+  resultsImpact: Ergebnisse & Auswirkungen
+  earlierCareer: Frühere Karriere
+  issued: 'Ausgestellt:'
+  project: 'Projekt:'
+  searchSkills: 'Fähigkeiten suchen...'
+  showAllSkills: Alle Fähigkeiten anzeigen
+  downloadPdf: PDF
+  downloadPdfLong: PDF herunterladen
+  dark: Dunkel
+  light: Hell
+  switchToDark: Zum Dunkelmodus wechseln
+  switchToLight: Zum Hellmodus wechseln
+  skipToContent: Zum Inhalt springen
+  backToTop: Nach oben
+  technologiesUsed: Verwendete Technologien
+  projects: Projekte & Vorträge
+  projectsList: Open Source & Projekte
+  community: Konferenzvorträge
+  printOrDownload: Drucken oder Herunterladen
+  printOrDownloadDesc: Wie möchten Sie diesen Lebenslauf erhalten?
+  printPage: Seite drucken
+  footerText: >-
+    Drücken Sie <kbd>Strg</kbd>/<kbd>⌘</kbd>+<kbd>P</kbd> für einen ATS-freundlichen Ausdruck, oder
+  footerDownload: PDF herunterladen
+  footerCredly: Zertifizierungsbadges verifizierbar auf
+  metaDescription: >-
+    Lebenslauf von {{name}} — {{title}} mit {{years}}+ Jahren Erfahrung in Softwareentwicklung, Webanwendungen und verteilten Systemen.
+  ogDescription: >-
+    Professioneller Lebenslauf — {{years}}+ Jahre in Softwareentwicklung, Full-Stack-Entwicklung und Cloud-nativen Anwendungen.

@@ -1,0 +1,40 @@
+{
+  "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "prebuild": "node scripts/clean.js",
+    "build": "node --env-file-if-exists=.env scripts/build-parallel.js",
+    "build:html": "node scripts/extract-critical-css.js && node scripts/build-all-locales.js",
+    "build:css": "npx lightningcss --bundle --minify css/main.css -o dist/styles.min.css",
+    "build:js": "npx esbuild scripts/main.js --bundle --minify --outfile=dist/scripts.min.js",
+    "build:assets": "cp assets/favicon.svg assets/robots.txt assets/sitemap.xml dist/ && mkdir -p dist/vendor/fontawesome/css dist/vendor/fontawesome/webfonts dist/files && cp vendor/fontawesome/css/all.min.css dist/vendor/fontawesome/css/ && cp vendor/fontawesome/webfonts/fa-solid-900.woff2 vendor/fontawesome/webfonts/fa-brands-400.woff2 dist/vendor/fontawesome/webfonts/ && cp -r ${CV_IMAGES_DIR:-images} dist/images && npx svgo dist/favicon.svg --quiet && if [ -n \"${CV_ASSETS_DIR}\" ]; then cp ${CV_ASSETS_DIR}/* dist/ 2>/dev/null || true; fi",
+    "dev": "SOURCEMAPS=1 npm run build && node scripts/dev-server.js",
+    "dev:watch": "node scripts/dev-watch.js",
+    "subset-fonts": "node scripts/subset-fonts.js",
+    "lint": "npx eslint . && npx stylelint \"css/**/*.css\"",
+    "test": "node --test tests/smoke.test.js",
+    "test:unit": "node --test tests/unit.test.js",
+    "test:e2e": "node --test tests/e2e.test.js",
+    "test:all": "npm test && npm run test:unit && npm run test:e2e",
+    "validate": "npx html-validate dist/index.html",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.11.2",
+    "@eslint/js": "^9.25.0",
+    "esbuild": "^0.25.12",
+    "eslint": "^9.25.0",
+    "handlebars": "^4.7.9",
+    "html-validate": "^10.11.3",
+    "husky": "^9.1.7",
+    "js-yaml": "^4.1.1",
+    "lightningcss-cli": "^1.29.0",
+    "prettier": "^3.8.1",
+    "puppeteer": "^24.40.0",
+    "stylelint": "^16.18.0",
+    "stylelint-config-standard": "^37.0.0",
+    "svgo": "^4.0.1"
+  }
+}

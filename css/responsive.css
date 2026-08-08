@@ -1,0 +1,778 @@
+/* Responsive Design — single-page layout */
+
+/* Ultra-wide screens */
+@media (min-width: 1920px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet landscape */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 45px;
+    height: 45px;
+    font-size: 1.1rem;
+  }
+
+  .skills-filter-container {
+    position: static;
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .section-text {
+    font-size: 1rem;
+  }
+
+  .timeline-item {
+    padding-left: 1.5rem;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive adjustments for skills filter */
+@media (max-width: 768px) {
+  .skills-category-filters {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .category-filter-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.75rem;
+  }
+}
+
+/* Print styles — A4/Letter optimized */
+@media print {
+  /* === Page setup === */
+  @page {
+    size: portrait;
+    margin: 8mm;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: #1f2937 !important;
+    font-size: 10pt;
+    line-height: 1.4;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* === Hide interactive/decorative/non-print elements === */
+  .hero-photo,
+  .hero-btn,
+  .back-to-top,
+  .details-toggle,
+  .collapse-chevron,
+  .skills-filter-container,
+  .skills-toggle-container,
+  .skip-to-content,
+  .theme-toggle,
+  .cv-footer,
+  .print-modal-overlay,
+  .collapsible-header .collapse-chevron,
+  .promotion-badge,
+  .lang-link-icon {
+    display: none !important;
+  }
+
+  /* === Layout reset === */
+  .page {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .content {
+    padding: 0 !important;
+  }
+
+  /* === Hero / Header — compact print header === */
+  .hero {
+    padding: 0 0 8pt !important;
+    margin-bottom: 10pt !important;
+    border-bottom: none !important;
+  }
+
+  .hero-top {
+    gap: 0 !important;
+  }
+
+  .hero-name {
+    font-size: 18pt !important;
+    font-weight: 800 !important;
+    margin-bottom: 2pt !important;
+    color: #000 !important;
+  }
+
+  .hero-title {
+    font-size: 11pt !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .hero-contact {
+    font-size: 9pt !important;
+    color: #444 !important;
+  }
+
+  .hero-location {
+    margin-bottom: 0 !important;
+    font-size: 9pt !important;
+  }
+
+  .hero-location-link {
+    color: #444 !important;
+    text-decoration: none !important;
+  }
+
+  /* Show contact info as plain text in print */
+  nav.hero-links {
+    display: none !important;
+  }
+
+  .print-contact {
+    display: block !important;
+    font-size: 9pt !important;
+    color: #444 !important;
+    margin-top: 3pt !important;
+  }
+
+  /* Languages bar — inline in print */
+  .languages-bar {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 4pt 16pt !important;
+    margin-top: 6pt !important;
+  }
+
+  .language-item,
+  .language-item-link {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4pt !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .language-item-link {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  .language-info {
+    gap: 4pt !important;
+  }
+
+  .language-name {
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+  }
+
+  .language-level {
+    font-size: 8pt !important;
+    color: #666 !important;
+  }
+
+  .language-bar {
+    display: none !important;
+  }
+
+  /* === Sections === */
+  .section {
+    opacity: 1 !important;
+    transform: none !important;
+    margin-bottom: 12pt !important;
+    page-break-inside: auto;
+  }
+
+  .section.js-animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .section > * {
+    animation: none !important;
+  }
+
+  .section-title {
+    font-size: 13pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 8pt !important;
+    padding-bottom: 4pt !important;
+    color: #000 !important;
+    page-break-after: avoid;
+    break-after: avoid;
+    border-bottom: 1.5pt solid #000 !important;
+  }
+
+  .section-title::after {
+    display: none !important;
+  }
+
+  .section-text {
+    font-size: 9.5pt !important;
+    line-height: 1.5 !important;
+    margin-bottom: 4pt !important;
+    color: #333 !important;
+  }
+
+  /* === Experience === */
+  #experience {
+    page-break-inside: auto;
+  }
+
+  /* Keep the Experience heading together with the first company block */
+  #experience .section-title {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  #experience .timeline-item:first-of-type {
+    page-break-before: avoid;
+    break-before: avoid;
+    page-break-inside: auto;
+  }
+
+  .timeline-item {
+    margin-bottom: 14pt !important;
+    padding-left: 0 !important;
+    border-left: none !important;
+    page-break-inside: auto;
+  }
+
+  .timeline-item::before,
+  .timeline-item::after {
+    display: none !important;
+  }
+
+  .timeline-date,
+  .position-date {
+    font-size: 8.5pt !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+    margin-bottom: 1pt !important;
+  }
+
+  .timeline-company {
+    font-size: 10.5pt !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+    margin-bottom: 1pt !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    cursor: default !important;
+  }
+
+  .timeline-company:hover {
+    background: none !important;
+    color: #000 !important;
+  }
+
+  .company-position {
+    font-size: 9.5pt !important;
+    color: #333 !important;
+    margin-bottom: 1pt !important;
+  }
+
+  .position-item .timeline-title {
+    font-size: 9.5pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 0 !important;
+    color: #000 !important;
+    display: inline !important;
+  }
+
+  .position-item .timeline-project {
+    font-size: 9pt !important;
+    color: #333 !important;
+    margin-bottom: 3pt !important;
+    display: inline !important;
+  }
+
+  .position-item .timeline-project::after {
+    content: '\A' !important;
+    white-space: pre !important;
+  }
+
+  .position-item .timeline-project::before {
+    content: ' | ' !important;
+  }
+
+  .timeline-title {
+    font-size: 9.5pt !important;
+    font-weight: 600 !important;
+    margin-bottom: 2pt !important;
+    color: #000 !important;
+  }
+
+  .timeline-location {
+    font-size: 8.5pt !important;
+    color: #666 !important;
+    margin-bottom: 4pt !important;
+    font-style: italic !important;
+  }
+
+  .timeline-project {
+    font-size: 9pt !important;
+    color: #333 !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .timeline-description {
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    color: #333 !important;
+  }
+
+  .timeline-description li {
+    margin-left: 12pt !important;
+    margin-bottom: 2pt !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Position timeline within company groups */
+  .position-timeline {
+    margin-top: 6pt !important;
+    padding-left: 10pt !important;
+    border-left: 1pt solid #ccc !important;
+  }
+
+  .position-item {
+    margin-bottom: 8pt !important;
+    page-break-inside: auto;
+  }
+
+  /* Reveal collapsed timeline-project in print */
+  .position-item.collapsed .timeline-project {
+    display: inline !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+    visibility: visible !important;
+  }
+
+  .company-collapsed .position-timeline {
+    display: block !important;
+  }
+
+  .experience-section.summary-section {
+    display: none !important;
+  }
+
+  /* Hide Project Overview, Team Focus, Role Focus — keep only Results & Impact */
+  .experience-section {
+    margin-bottom: 4pt !important;
+    display: none !important;
+  }
+
+  .experience-section.experience-results {
+    display: block !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .experience-section.experience-results > .experience-section-title {
+    display: none !important;
+  }
+
+  /* Tech tags — inline text for print */
+  .tech-tags {
+    display: inline !important;
+    gap: 0 !important;
+    margin-bottom: 4pt !important;
+    margin-top: 2pt !important;
+    padding: 0 !important;
+  }
+
+  .tech-tags::before {
+    content: 'Technologies: ' !important;
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+  }
+
+  .tech-tag {
+    display: inline !important;
+    font-size: 8.5pt !important;
+    padding: 0 !important;
+    background: none !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-weight: 400 !important;
+  }
+
+  .tech-tag::after {
+    content: ', ' !important;
+  }
+
+  .tech-tag:last-child::after {
+    content: '' !important;
+  }
+
+  /* Project inline links — compact for print */
+  .project-inline-links a {
+    font-size: 8pt !important;
+    color: #1a56db !important;
+  }
+
+  .project-inline-links a i {
+    display: none !important;
+  }
+
+  .project-inline-links a::after {
+    content: ' (' attr(href) ')';
+    font-size: 7pt;
+    color: #555;
+  }
+
+  /* Project links — inline text for print */
+  .project-links {
+    display: inline !important;
+    gap: 0 !important;
+    margin-bottom: 4pt !important;
+    margin-top: 0 !important;
+    padding: 0 !important;
+  }
+
+  .project-links::before {
+    content: ' | Links: ' !important;
+    font-size: 8.5pt !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+  }
+
+  .project-links li {
+    display: inline !important;
+  }
+
+  .project-links a {
+    font-size: 8.5pt !important;
+    color: #1a56db !important;
+    padding: 0 !important;
+  }
+
+  .project-links li::after {
+    content: ', ' !important;
+  }
+
+  .project-links li:last-child::after {
+    content: '' !important;
+  }
+
+  .project-links a i {
+    display: none !important;
+  }
+
+  /* === Early Career — compact === */
+  .early-career {
+    margin-top: 12pt !important;
+    padding-top: 8pt !important;
+    border-top: 1pt solid #ccc !important;
+  }
+
+  .early-career-title {
+    font-size: 10pt !important;
+    margin-bottom: 4pt !important;
+  }
+
+  .early-career-list {
+    gap: 2pt !important;
+  }
+
+  .early-career-item {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 8pt !important;
+    margin-bottom: 0 !important;
+    align-items: baseline !important;
+  }
+
+  .early-career-date {
+    font-size: 8pt !important;
+    min-width: 85pt !important;
+    white-space: nowrap !important;
+    color: #333 !important;
+  }
+
+  .early-career-content {
+    display: inline !important;
+  }
+
+  .early-career-role {
+    font-size: 9pt !important;
+  }
+
+  .early-career-separator {
+    font-size: 0 !important;
+  }
+
+  .early-career-separator::before {
+    content: ' | ' !important;
+    font-size: 9pt !important;
+  }
+
+  .early-career-company {
+    font-size: 9pt !important;
+  }
+
+  .early-career-location {
+    display: none !important;
+  }
+
+  .early-career-description {
+    display: inline !important;
+    width: auto !important;
+    margin: 0 !important;
+    font-size: 9pt !important;
+  }
+
+  .early-career-description::before {
+    content: ' | ';
+  }
+
+  /* === Education — compact list for print === */
+  .education-list {
+    gap: 2pt !important;
+  }
+
+  .education-item {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 0.5rem !important;
+    align-items: baseline !important;
+  }
+
+  .education-date {
+    font-size: 8pt !important;
+    min-width: 5rem !important;
+    color: #333 !important;
+  }
+
+  .education-content {
+    display: inline !important;
+  }
+
+  .education-degree {
+    font-size: 9pt !important;
+  }
+
+  .education-institution {
+    font-size: 9pt !important;
+  }
+
+  .education-location {
+    display: inline !important;
+    font-size: 8.5pt !important;
+    font-style: italic !important;
+  }
+
+  /* === Certifications - compact list for print === */
+  .cert-grid {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    gap: 1pt 12pt !important;
+  }
+
+  .certification-item {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    color: inherit !important;
+    width: 48% !important;
+  }
+
+  .certification-logo {
+    display: none !important;
+  }
+
+  .certification-content {
+    display: inline !important;
+  }
+
+  .certification-title {
+    font-size: 8.5pt !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+    overflow: visible !important;
+    display: inline !important;
+  }
+
+  .certification-title::after {
+    content: '\00a0\00a0\00a0\00a0' !important;
+    font-weight: 400 !important;
+  }
+
+  .certification-date {
+    display: none !important;
+  }
+
+  .certification-link-icon {
+    display: none !important;
+  }
+
+  /* === Skills — inline text list for print === */
+  #skills {
+    page-break-before: always;
+    page-break-inside: auto;
+  }
+
+  .skills-extra {
+    display: block !important;
+  }
+
+  .skills-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3pt !important;
+  }
+
+  .skill-category {
+    display: block !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: none !important;
+  }
+
+  .skill-category.skills-extra {
+    display: block !important;
+  }
+
+  .skill-category:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .skill-category-title {
+    display: inline !important;
+    font-size: 8.5pt !important;
+    font-weight: 700 !important;
+    margin-bottom: 0 !important;
+    color: #000 !important;
+  }
+
+  .skill-category-title::after {
+    content: ':' !important;
+    font-weight: 400 !important;
+    margin-left: -0.3em !important;
+  }
+
+  .skill-category-title i {
+    display: none !important;
+  }
+
+  #skills .skill-tags {
+    display: inline !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #skills .skill-tag {
+    display: inline !important;
+    font-size: 8.5pt !important;
+    padding: 0 !important;
+    background: none !important;
+    color: #333 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-weight: 400 !important;
+  }
+
+  #skills .skill-tag::after {
+    content: ', ' !important;
+  }
+
+  #skills .skill-tag:last-child::after {
+    content: '' !important;
+  }
+
+  /* === Links === */
+  a[href^='http']::after,
+  a[href^='mailto']::after {
+    content: none !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+
+  /* === Page break control === */
+  h2,
+  h3,
+  h4,
+  h5 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  .section:first-child {
+    page-break-before: avoid;
+  }
+}

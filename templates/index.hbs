@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="{{i18n.lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{hero.profile.name}} - {{hero.profile.title}}</title>
+    <meta
+      name="description"
+      content="{{t "metaDescription"}}"
+    />
+    <meta property="og:title" content="{{hero.profile.name}} — {{hero.profile.title}}" />
+    <meta
+      property="og:description"
+      content="{{t "ogDescription"}}"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{site.baseUrl}}/" />
+    <meta property="og:locale" content="{{i18n.lang}}" />
+    <meta property="og:image" content="{{hero.profile.photo.webp}}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{hero.profile.name}} — {{hero.profile.title}}" />
+    <meta
+      name="twitter:description"
+      content="{{t "ogDescription"}}"
+    />
+    <meta name="twitter:image" content="{{hero.profile.photo.webp}}" />
+    <meta name="author" content="{{hero.profile.name}}" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'none';" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="{{site.baseUrl}}/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      /* Critical CSS — auto-extracted from source (do not edit manually) */
+      @media (prefers-color-scheme:dark){:root:not([data-theme='light']){--primary-color:var(--dark-primary-color);--primary-hover:var(--dark-primary-hover);--primary-light:var(--dark-primary-light);--secondary-color:var(--dark-secondary-color);--text-primary:var(--dark-text-primary);--text-secondary:var(--dark-text-secondary);--text-tertiary:var(--dark-text-tertiary);--gradient-primary-color:var(--dark-gradient-primary);--gradient-secondary-color:var(--dark-gradient-secondary);--bg-primary:var(--dark-bg-primary);--bg-secondary:var(--dark-bg-secondary);--bg-hover:var(--dark-bg-hover);--border-color:var(--dark-border-color);--border-hover:var(--dark-border-hover);--shadow-color:var(--dark-shadow-color);--shadow-primary:var(--dark-shadow-primary);--shadow-primary-lg:var(--dark-shadow-primary-lg);--shadow-primary-sm:var(--dark-shadow-primary-sm)}}
+    </style>
+    <link rel="stylesheet" href="/styles.min.css" />
+    <link rel="preload" href="{{hero.profile.photo.webp}}" as="image" type="image/webp" />
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css" />
+    <noscript>
+      <style>
+        .section.js-animate { opacity: 1 !important; transform: none !important; }
+        .skills-filter-container { display: none; }
+        .skills-toggle-container { display: none; }
+        .skills-extra { display: block !important; }
+        .theme-toggle { display: none; }
+        .back-to-top { display: none; }
+        .details-toggle { display: none; }
+        .collapsible-header .collapse-chevron { display: none; }
+        .experience-section.summary-section { display: block !important; }
+        .position-item.collapsed .experience-section,
+        .position-item.collapsed .timeline-project { display: block !important; }
+        .company-collapsed .position-timeline { display: block !important; }
+      </style>
+    </noscript>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{hero.profile.name}}",
+        "jobTitle": "{{hero.profile.title}}",
+        "url": "{{site.baseUrl}}/",
+        "image": "{{hero.profile.photo.png}}",
+        "sameAs": [
+          {{#each hero.social}}{{#if external}}"{{safeUrl href}}"{{#unless @last}},
+          {{/unless}}{{/if}}{{/each}}{{#if site.credlyProfileUrl}},
+          "{{site.credlyProfileUrl}}"{{/if}}
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "{{experience.groups.[0].company}}"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "{{education.groups.[0].institution}}"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "{{hero.profile.location.city}}",
+          "addressCountry": "{{hero.profile.location.country}}"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#about" class="skip-to-content">{{t "skipToContent"}}</a>
+
+    <div class="page">
+      <header class="hero">
+        <div class="hero-top">
+          <div class="hero-text">
+            <h1 class="hero-name">{{hero.profile.name}}</h1>
+            <p class="hero-title">{{hero.profile.title}}</p>
+            <address class="hero-contact">
+            <p class="hero-location">
+              <a href="{{safeUrl hero.profile.location.url}}" target="_blank" rel="noopener noreferrer" class="hero-location-link">
+                {{hero.profile.location.text}}
+              </a>
+            </p>
+            </address>
+            <div class="print-contact">
+              {{#each hero.social}}
+              <span>{{displayUrl href}}</span>
+              {{#unless @last}}<span class="print-sep">|</span>{{/unless}}
+              {{/each}}
+              <span class="print-sep">|</span>
+              <span>{{displayUrl site.baseUrl}}</span>
+            </div>
+            <nav class="hero-links" aria-label="Contact and profile links">
+              {{#each hero.social}}
+              <a href="{{safeUrl href}}" {{#if external}}target="_blank" rel="noopener noreferrer"{{/if}} class="hero-btn hero-btn-outline" aria-label="{{label}}"><i class="{{icon}}"></i> {{label}}</a>
+              {{/each}}
+              <a href="{{safeUrl hero.cvDownloadUrl}}" target="_blank" rel="noopener noreferrer" class="hero-btn hero-btn-filled" aria-label="{{t "downloadPdf"}}"><i class="fa-solid fa-file-pdf"></i> {{t "downloadPdf"}}</a>
+              <a href="{{i18n.altLangUrl}}" class="hero-btn hero-btn-outline lang-toggle" aria-label="{{i18n.altLangLabel}}" title="{{i18n.altLangLabel}}"><i class="fa-solid fa-language"></i> {{i18n.altLangLabel}}</a>
+              <button type="button" class="hero-btn hero-btn-outline theme-toggle" aria-label="{{t "switchToDark"}}" title="{{t "dark"}}" data-label-dark="{{t "dark"}}" data-label-light="{{t "light"}}" data-aria-dark="{{t "switchToLight"}}" data-aria-light="{{t "switchToDark"}}"><i class="fa-solid fa-moon"></i> <span class="theme-toggle-label">{{t "dark"}}</span></button>
+            </nav>
+          </div>
+          <picture class="hero-photo">
+            <source srcset="{{hero.profile.photo.webp}}" type="image/webp" />
+            <img src="{{hero.profile.photo.png}}" alt="{{hero.profile.name}}" />
+          </picture>
+        </div>
+        {{#if hero.languages}}
+        <div class="languages-bar">
+          {{#each hero.languages}}
+          {{#if certUrl}}
+          <a href="{{safeUrl certUrl}}" target="_blank" rel="noopener noreferrer" class="language-item language-item-link" aria-label="{{name}} — {{level}} (view certificate)">
+          {{else}}
+          <div class="language-item">
+          {{/if}}
+            <div class="language-info">
+              <span class="language-name">{{name}}</span>
+              <span class="language-level">{{level}}{{#if certUrl}} <span class="lang-link-icon">↗</span>{{/if}}</span>
+            </div>
+            <div class="language-bar" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" aria-label="{{name}}, {{percent}}% — {{level}}">
+              <div class="language-progress" style="width: {{percent}}%"></div>
+            </div>
+          {{#if certUrl}}
+          </a>
+          {{else}}
+          </div>
+          {{/if}}
+          {{/each}}
+        </div>
+        {{/if}}
+      </header>
+
+      <main class="content" id="about">
+        <section class="section">
+          <h2 class="section-title">{{t "summary"}}</h2>
+          {{#each about.paragraphs}}
+          <p class="section-text">{{this}}</p>
+          {{/each}}
+        </section>
+
+        {{> experience}}
+        {{> projects}}
+        {{> education}}
+        {{> certifications}}
+        {{> skills}}
+
+        <footer class="cv-footer">
+          <p class="cv-footer-text">
+            {{{t "footerText"}}}
+            <a href="{{safeUrl hero.cvDownloadUrl}}" target="_blank" rel="noopener noreferrer">{{t "footerDownload"}}</a>.
+            {{t "footerCredly"}} <a href="{{safeUrl site.credlyProfileUrl}}" target="_blank" rel="noopener noreferrer">Credly</a>.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <button type="button" class="back-to-top" aria-label="{{t "backToTop"}}">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <div class="print-modal-overlay" id="printModal" role="dialog" aria-modal="true" aria-labelledby="printModalTitle" tabindex="-1" hidden data-pdf-url="{{site.baseUrl}}{{site.cvPdfPath}}">
+      <div class="print-modal">
+        <p class="print-modal-title" id="printModalTitle">{{t "printOrDownload"}}</p>
+        <p>{{t "printOrDownloadDesc"}}</p>
+        <div class="print-modal-actions">
+          <button type="button" class="btn btn-primary" id="printModalDownload">
+            <i class="fa-solid fa-file-pdf"></i> {{t "downloadPdfLong"}}
+          </button>
+          <button type="button" class="btn btn-secondary" id="printModalPrint">
+            <i class="fa-solid fa-print"></i> {{t "printPage"}}
+          </button>
+        </div>
+        <button type="button" class="print-modal-close" id="printModalClose" aria-label="Close dialog">
+          <i class="fa-solid fa-times"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="/scripts.min.js"></script>
+    <script src="/sw-register.js"></script>
+  </body>
+</html>

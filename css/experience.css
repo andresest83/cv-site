@@ -1,0 +1,547 @@
+/* Timeline Items */
+.timeline-item {
+  margin-bottom: 3.5rem;
+  padding-left: 2rem;
+  border-left: 2px solid var(--border-color);
+  position: relative;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -6px;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: 2px;
+  height: 0.5rem;
+  background: var(--bg-secondary);
+  z-index: 0;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* Single timeline items (not in company-group) should match company-position size */
+.timeline-item:not(.company-group) .timeline-title {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-company {
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.timeline-location {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.company-position {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.company-group .timeline-location {
+  margin-top: 0;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.timeline-project {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+.timeline-description {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.timeline-description li {
+  margin-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+.experience-section {
+  margin-bottom: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.experience-section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Company Group - Multiple positions at same company */
+.company-group .timeline-company {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  border-radius: 0.5rem;
+}
+
+.company-group .timeline-company:hover {
+  color: var(--primary-hover);
+  background: var(--bg-hover);
+}
+
+.company-collapsed .position-timeline {
+  display: none;
+}
+
+.position-timeline {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--border-color);
+  position: relative;
+}
+
+.position-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.position-date {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.position-item .timeline-title {
+  font-size: 1rem;
+}
+
+.position-item .timeline-title:hover {
+  color: var(--primary-hover);
+}
+
+.position-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Collapse chevron inside collapsible-header buttons */
+.collapse-chevron {
+  color: var(--primary-color);
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.collapsible-header:hover .collapse-chevron {
+  color: var(--primary-hover);
+  transform: scale(1.15);
+}
+
+.position-item.collapsed .experience-section {
+  display: none;
+}
+
+.position-item.collapsed .details-toggle {
+  display: none;
+}
+
+.position-item.collapsed .timeline-project {
+  display: none;
+}
+
+/* Summary sections hidden by default, shown via class */
+.experience-section.summary-section {
+  display: none;
+}
+
+.experience-section.summary-section.visible {
+  display: block;
+}
+
+/* Collapsible header — replaces the original static element with a <button> */
+.collapsible-header {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  padding: 0;
+}
+
+/* Details toggle link */
+.details-toggle {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0;
+  margin-top: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition);
+}
+
+.details-toggle:hover {
+  color: var(--primary-hover);
+}
+
+.details-toggle i {
+  font-size: 0.7rem;
+}
+
+/* Per-role technology tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  background: #e8f0fe;
+  color: #1a56db;
+  border: 1px solid #c3d9f7;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .tech-tag {
+    background: #1e3a5f;
+    color: #93c5fd;
+    border-color: #2d5a8e;
+  }
+}
+
+[data-theme='dark'] .tech-tag {
+  background: #1e3a5f;
+  color: #93c5fd;
+  border-color: #2d5a8e;
+}
+
+/* Inline project links (press releases, talks, case studies) */
+.project-inline-links {
+  margin-left: 0.5rem;
+}
+
+.project-inline-links a {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-left: 0.4rem;
+}
+
+.project-inline-links a:hover {
+  text-decoration: underline;
+}
+
+.project-inline-links a i {
+  font-size: 0.75em;
+  margin-right: 0.15rem;
+}
+
+/* Per-role project/repository links */
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding: 0;
+}
+
+.project-links li {
+  display: inline-block;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: #1a56db;
+  text-decoration: none;
+  padding: 0.15rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: background 0.15s;
+}
+
+.project-links a:hover {
+  background: #e8f0fe;
+  text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .project-links a {
+    color: #93c5fd;
+  }
+
+  :root:not([data-theme='light']) .project-links a:hover {
+    background: #1e3a5f;
+  }
+}
+
+[data-theme='dark'] .project-links a {
+  color: #93c5fd;
+}
+
+[data-theme='dark'] .project-links a:hover {
+  background: #1e3a5f;
+}
+
+/* Early Career section */
+.early-career {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--border-color);
+}
+
+.early-career-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.early-career-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.early-career-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.early-career-date {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.early-career-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.early-career-role {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.early-career-separator {
+  color: var(--text-secondary);
+  margin: 0 0.25rem;
+}
+
+.early-career-company {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.early-career-location {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-style: italic;
+  width: 100%;
+  margin-top: 0.1rem;
+}
+
+.early-career-description {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  width: 100%;
+  margin: 0.2rem 0 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .early-career-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .early-career-date {
+    min-width: auto;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Promotion Badge & Indicator */
+.promotion-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--gradient-primary-color),
+    var(--gradient-secondary-color)
+  );
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-left: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(108, 181, 109, 0.3);
+  animation: promotionPulse 2s ease-in-out infinite;
+}
+
+.promotion-indicator {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gradient-secondary-color);
+  background: rgba(108, 181, 109, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-left: 0.5rem;
+  border: 1px solid var(--gradient-secondary-color);
+}
+
+@keyframes promotionPulse {
+  0%,
+  100% {
+    box-shadow: 0 2px 8px rgba(108, 181, 109, 0.3);
+  }
+  50% {
+    box-shadow: 0 2px 16px rgba(108, 181, 109, 0.5);
+  }
+}
+
+/* Education section — compact list (same pattern as Early Career) */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.education-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: baseline;
+}
+
+.education-date {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+  min-width: 7rem;
+  white-space: nowrap;
+}
+
+.education-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1rem;
+}
+
+.education-degree {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.education-institution {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.education-location {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  width: 100%;
+  margin-top: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  .education-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .education-date {
+    min-width: auto;
+  }
+}

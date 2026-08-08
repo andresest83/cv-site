@@ -1,0 +1,18 @@
+[default]
+locale = "en"
+
+[default.extend-identifiers]
+HashiCorp = "HashiCorp"
+AKS = "AKS"
+aks = "aks"
+Braket = "Braket"
+
+[files]
+extend-exclude = [
+    "*.lock",
+    "dist/**",
+    "node_modules/**",
+    "vendor/**",
+    "data/de/**",
+    "data/i18n.yaml",
+]
