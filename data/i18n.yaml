@@ -1,5 +1,5 @@
 defaultLocale: en
-locales: [en, de]
+locales: [en]
 
 en:
   lang: en
@@ -41,9 +41,9 @@ en:
   footerDownload: download the PDF
   footerCredly: Certification badges verify on
   metaDescription: >-
-    CV of {{name}} — {{title}} with {{years}}+ years of experience in software engineering, web applications, and distributed systems.
+    CV of {{name}}, {{title}}, with {{years}} years of experience in AWS cloud platforms, infrastructure as code, and data and AI infrastructure.
   ogDescription: >-
-    Professional CV — {{years}}+ years in software engineering, full-stack development, and cloud-native applications.
+    Professional CV: {{years}} years in AWS platform engineering, infrastructure as code, and data and AI infrastructure.
 
 de:
   lang: de
@@ -85,6 +85,6 @@ de:
   footerDownload: PDF herunterladen
   footerCredly: Zertifizierungsbadges verifizierbar auf
   metaDescription: >-
-    Lebenslauf von {{name}} — {{title}} mit {{years}}+ Jahren Erfahrung in Softwareentwicklung, Webanwendungen und verteilten Systemen.
+    Lebenslauf von {{name}}, {{title}}, mit {{years}}+ Jahren Erfahrung in Softwareentwicklung, Webanwendungen und verteilten Systemen.
   ogDescription: >-
-    Professioneller Lebenslauf — {{years}}+ Jahre in Softwareentwicklung, Full-Stack-Entwicklung und Cloud-nativen Anwendungen.
+    Professioneller Lebenslauf: {{years}}+ Jahre in Softwareentwicklung, Full-Stack-Entwicklung und Cloud-nativen Anwendungen.

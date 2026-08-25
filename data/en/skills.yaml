@@ -1,74 +1,57 @@
-- title: Programming Languages
-  icon: fa-solid fa-code
-  color: blue
-  featured: true
-  tags:
-    - TypeScript
-    - JavaScript
-    - Python
-    - Go
-    - SQL
-
-- title: Frontend
-  icon: fa-solid fa-display
-  color: blue
-  featured: true
-  tags:
-    - React
-    - Next.js
-    - Vue.js
-    - HTML/CSS
-    - Tailwind CSS
-
-- title: Backend
-  icon: fa-solid fa-server
-  color: teal
-  featured: true
-  tags:
-    - Node.js
-    - Express
-    - FastAPI
-    - Django
-    - GraphQL
-    - REST APIs
-
-- title: Databases
-  icon: fa-solid fa-database
-  color: teal
-  featured: true
-  tags:
-    - PostgreSQL
-    - Redis
-    - MongoDB
-    - Elasticsearch
-
-- title: Cloud & DevOps
+- title: Cloud and Infrastructure as Code
   icon: fa-solid fa-cloud
-  color: green
+  color: blue
   featured: true
   tags:
     - AWS
-    - Docker
-    - Kubernetes
     - Terraform
+    - Terragrunt
+    - AWS CDK
+    - Amazon Bedrock
+    - Amazon SageMaker
+    - EKS
+    - ECS
+    - AWS Fargate
+    - Lambda
+    - AWS Glue
+    - Amazon Athena
+    - AWS Lake Formation
+    - Amazon Redshift Serverless
+    - Transit Gateway
+    - VPC
+    - IAM
+    - Amazon S3
+    - KMS
+
+- title: CI/CD and GitOps
+  icon: fa-solid fa-code-branch
+  color: teal
+  featured: true
+  tags:
+    - GitLab CI/CD
     - GitHub Actions
-    - CI/CD
+    - ArgoCD
+    - AWS CodePipeline
+    - AWS CodeBuild
+    - Packer
+    - TFSec
+    - Kubernetes
+    - Helm
+    - Python
+    - Bash
+    - PowerShell
+    - SQL
 
-- title: Testing
-  icon: fa-solid fa-vial
-  color: green
-  tags:
-    - Jest
-    - Vitest
-    - Playwright
-    - pytest
-
-- title: Tools & Practices
-  icon: fa-solid fa-wrench
+- title: Data and AI
+  icon: fa-solid fa-brain
   color: purple
+  featured: true
   tags:
-    - Git
-    - Linux
-    - Agile/Scrum
-    - Code Review
-    - Technical Writing
+    - PySpark
+    - Apache Iceberg
+    - Retrieval-Augmented Generation (RAG)
+    - vLLM
+    - MLflow
+    - Trino / Starburst
+    - Grafana
+    - AWS Budgets and Cost Explorer

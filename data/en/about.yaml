@@ -1,7 +1,9 @@
 paragraphs:
   - >-
-    Senior Software Engineer and Tech Lead with {{yearsOfExperience}}+ years
-    of experience building scalable web applications and distributed systems.
-    Passionate about clean architecture, developer experience, and mentoring
-    engineering teams. Experienced in full-stack development with a focus on
-    backend services, API design, and cloud-native applications.
+    Cloud platform engineer, {{yearsOfExperience}} years from bare-metal
+    datacenters to production AI infrastructure. Worked for startups, SMEs and
+    large corporations, on projects in seven countries across Latin America,
+    Europe, the Middle East and the United States, in three different languages.
+    Former AWS Professional Services, delivering for regulated industry:
+    automotive, logistics, pharmaceutical, chemical and rail. Currently running
+    platform engineering across six AWS projects, entirely in Terraform.

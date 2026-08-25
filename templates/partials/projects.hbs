@@ -5,7 +5,7 @@
   <h3 class="projects-subsection-title">{{t "projectsList"}}</h3>
   <ul class="projects-list">
     {{#each projects.projects}}
-    <li><a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> {{title}}</a><span class="project-desc"> — {{description}}</span></li>
+    <li><a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> {{title}}</a><span class="project-desc">: {{description}}</span></li>
     {{/each}}
   </ul>
 
@@ -13,7 +13,7 @@
   <h3 class="projects-subsection-title">{{t "community"}}</h3>
   <ul class="projects-list">
     {{#each projects.community}}
-    <li>{{#if url}}<a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i> {{title}}</a>{{else}}<span><i class="fa-solid fa-users"></i> {{title}}</span>{{/if}}<span class="project-desc"> — {{description}}</span></li>
+    <li>{{#if url}}<a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-users"></i> {{title}}</a>{{else}}<span><i class="fa-solid fa-users"></i> {{title}}</span>{{/if}}<span class="project-desc">: {{description}}</span></li>
     {{/each}}
   </ul>
   {{/if}}
