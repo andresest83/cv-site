@@ -23,12 +23,28 @@ const dataRoot = process.env.CV_DATA_DIR || path.join(ROOT, 'data');
 const hero = yaml.load(
   fs.readFileSync(path.join(dataRoot, 'en', 'hero.yaml'), 'utf8')
 );
-const fullName = hero.profile.name.replace(/\s+/g, '_');
+// ASCII-fold the filename only: the displayed name keeps its accents.
+// Non-ASCII filenames get mangled in the recruiter -> ATS upload chain.
+const fullName = hero.profile.name
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/[^A-Za-z0-9]+/g, '_')
+  .replace(/^_+|_+$/g, '');
 
-const PAGES = [
-  { url: '/', output: `CV_${fullName}.pdf` },
-  { url: '/de/', output: `CV_${fullName}_DE.pdf` },
-];
+// Derive pages from the built locale list. Hardcoding '/de/' here silently
+// renders a 404 page to PDF when that locale is not built, because
+// page.goto() does not throw on a 404.
+const i18n = yaml.load(
+  fs.readFileSync(path.join(dataRoot, 'i18n.yaml'), 'utf8')
+);
+const locales =
+  Array.isArray(i18n.locales) && i18n.locales.length ? i18n.locales : ['en'];
+
+const PAGES = locales.map(loc =>
+  loc === 'en'
+    ? { url: '/', output: `CV_${fullName}.pdf` }
+    : { url: `/${loc}/`, output: `CV_${fullName}_${loc.toUpperCase()}.pdf` }
+);
 
 const MIME = {
   '.html': 'text/html',

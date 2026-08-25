@@ -140,6 +140,8 @@ const heroSchema = {
       fields: {
         name: { type: 'string', required: true },
         title: { type: 'string', required: true },
+        credentials: { type: 'string', required: false },
+        seoTitle: { type: 'string', required: false },
         photo: {
           type: 'object',
           required: false,
@@ -182,7 +184,7 @@ const heroSchema = {
         fields: {
           name: { type: 'string', required: true },
           level: { type: 'string', required: true },
-          percent: { type: 'number', required: true },
+          percent: { type: 'number', required: false },
           certUrl: { type: 'url', required: false },
         },
       },
@@ -285,8 +287,8 @@ const certSchema = {
   required: true,
   fields: {
     title: { type: 'string', required: true },
-    image: { type: 'url', required: true },
-    href: { type: 'url', required: true },
+    image: { type: 'url', required: false },
+    href: { type: 'url', required: false },
   },
 };
 

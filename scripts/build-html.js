@@ -36,9 +36,10 @@ function loadYaml(filename) {
 }
 
 // Load locale-specific YAML from <dataRoot>/<locale>/
-function loadLocalizedYaml(filename) {
+function loadLocalizedYaml(filename, { optional = false } = {}) {
   const localePath = path.join(dataRoot, locale, filename);
   if (!fs.existsSync(localePath)) {
+    if (optional) return undefined;
     console.error(`✗ Missing localized data file: ${localePath}`);
     process.exit(1);
   }
@@ -74,7 +75,8 @@ const data = {
   hero: loadLocalizedYaml('hero.yaml'),
   about: loadLocalizedYaml('about.yaml'),
   experience: loadLocalizedYaml('experience.yaml'),
-  projects: loadLocalizedYaml('projects.yaml'),
+  // Optional: absent until phase 2. An absent file leaves the section unrendered.
+  projects: loadLocalizedYaml('projects.yaml', { optional: true }),
   education: loadLocalizedYaml('education.yaml'),
   skills: loadLocalizedYaml('skills.yaml'),
   certifications: loadYaml('certifications.yaml'),
@@ -86,7 +88,7 @@ validateData(data);
 // Replace {{yearsOfExperience}} placeholder in about paragraphs
 if (data.site.careerStartYear && data.about?.paragraphs) {
   const years = new Date().getFullYear() - data.site.careerStartYear;
-  const rounded = Math.floor(years / 5) * 5;
+  const rounded = years;
   data.about.paragraphs = data.about.paragraphs.map(p =>
     p.replace(/\{\{yearsOfExperience\}\}/g, String(rounded))
   );
@@ -95,7 +97,7 @@ if (data.site.careerStartYear && data.about?.paragraphs) {
 // Interpolate i18n meta placeholders with actual data
 if (data.site.careerStartYear) {
   const years = new Date().getFullYear() - data.site.careerStartYear;
-  const rounded = Math.floor(years / 5) * 5;
+  const rounded = years;
   const replacements = {
     name: data.hero.profile.name,
     title: data.hero.profile.title,
@@ -120,8 +122,7 @@ if (data.site.careerStartYear) {
  */
 Handlebars.registerHelper('yearsSince', function (year) {
   if (typeof year !== 'number' || year < 1900) return '';
-  const total = new Date().getFullYear() - year;
-  return Math.floor(total / 5) * 5;
+  return new Date().getFullYear() - year;
 });
 
 /**

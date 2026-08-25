@@ -209,7 +209,7 @@ function main() {
     process.exit(1);
   }
 
-  const newStyleBlock = `<style>\n      /* Critical CSS — auto-extracted from source (do not edit manually) */\n      ${minified}\n    </style>`;
+  const newStyleBlock = `<style>\n      /* Critical CSS: auto-extracted from source (do not edit manually) */\n      ${minified}\n    </style>`;
 
   template =
     template.slice(0, styleStart) + newStyleBlock + template.slice(styleEnd);
