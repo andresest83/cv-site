@@ -31,22 +31,29 @@
         </ul>
         {{/if}}
 
+        {{#if overview}}
         <div class="experience-section">
           <p class="experience-section-title">{{t "projectOverview"}}</p>
           <p class="timeline-description">{{overview}}</p>
         </div>
+        {{/if}}
 
+        {{#if teamFocus}}
         <div class="experience-section">
           <p class="experience-section-title">{{t "teamFocus"}}</p>
           <p class="timeline-description">{{teamFocus}}</p>
         </div>
+        {{/if}}
 
+        {{#if roleFocus}}
         <div class="experience-section">
           <p class="experience-section-title">{{t "roleFocus"}}</p>
           <p class="timeline-description">{{roleFocus}}</p>
         </div>
+        {{/if}}
 
-        <div class="experience-section experience-results">
+        {{#if results}}
+    <div class="experience-section experience-results">
           <p class="experience-section-title">{{t "resultsImpact"}}</p>
           <ul class="timeline-description">
             {{#each results}}
@@ -54,6 +61,7 @@
             {{/each}}
           </ul>
         </div>
+        {{/if}}
       </div>
       {{/each}}
     </div>
@@ -86,21 +94,28 @@
     </ul>
     {{/if}}
 
+    {{#if overview}}
     <div class="experience-section">
       <p class="experience-section-title">{{t "projectOverview"}}</p>
       <p class="timeline-description">{{overview}}</p>
     </div>
+    {{/if}}
 
+    {{#if teamFocus}}
     <div class="experience-section">
       <p class="experience-section-title">{{t "teamFocus"}}</p>
       <p class="timeline-description">{{teamFocus}}</p>
     </div>
+    {{/if}}
 
+    {{#if roleFocus}}
     <div class="experience-section">
       <p class="experience-section-title">{{t "roleFocus"}}</p>
       <p class="timeline-description">{{roleFocus}}</p>
     </div>
+    {{/if}}
 
+    {{#if results}}
     <div class="experience-section experience-results">
       <p class="experience-section-title">{{t "resultsImpact"}}</p>
       <ul class="timeline-description">
@@ -109,6 +124,7 @@
         {{/each}}
       </ul>
     </div>
+    {{/if}}
   </div>
   {{/each}}
 

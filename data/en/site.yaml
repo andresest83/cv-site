@@ -1,5 +1,4 @@
-baseUrl: https://example.com
-cvPdfPath: /files/CV_Jane_Doe.pdf
-careerStartYear: 2015
-credlyProfileUrl: https://www.credly.com/users/janedoe
+baseUrl: https://cv.andresestupinan.dev
+cvPdfPath: /files/CV_Andres_Estupinan.pdf
+careerStartYear: 2008
 lang: en

@@ -1,32 +1,28 @@
-- group: Cloud
+- group: AWS
   cssClass: cert-aws
   certs:
-    - title: 'AWS Certified Solutions Architect - Associate'
-      image: /images/certs/aws-sa-associate.webp
-      alt: AWS Solutions Architect Associate
-      href: https://www.credly.com/badges/example
-      issued: 'Mar 2023'
+    - title: 'AWS Certified Generative AI Developer - Professional'
+      image: /images/certs/aws-genai-developer-professional.webp
+      alt: AWS Certified Generative AI Developer, Professional
+      href: https://www.credly.com/earner/earned/badge/583d7d27-d9cf-49b5-b996-dda5d5340237
+      issued: 'Jun 2026'
+
+    - title: 'AWS Certified Machine Learning Engineer - Associate'
+      image: /images/certs/aws-ml-engineer-associate.webp
+      alt: AWS Certified Machine Learning Engineer, Associate
+      href: https://www.credly.com/earner/earned/badge/96e0e082-0ec2-4d17-837e-61523c5efd50
+      issued: 'Mar 2026'
 
     - title: 'AWS Certified Developer - Associate'
       image: /images/certs/aws-developer-associate.webp
-      alt: AWS Developer Associate
-      href: https://www.credly.com/badges/example
-      issued: 'Jun 2022'
+      alt: AWS Certified Developer, Associate
+      issued: 'Jun 2026'
 
-- group: Kubernetes
-  cssClass: cert-k8s
-  certs:
-    - title: Certified Kubernetes Application Developer
-      image: /images/certs/kubernetes-ckad.webp
-      alt: CKAD
-      href: https://www.credly.com/badges/example
-      issued: 'Sep 2022'
-
-- group: Other
+- group: HashiCorp
   cssClass: cert-other
   certs:
-    - title: 'HashiCorp Certified: Terraform Associate'
+    - title: 'HashiCorp Certified: Terraform Associate (003)'
       image: /images/certs/terraform_associate.webp
-      alt: Terraform Associate
-      href: https://www.credly.com/badges/example
-      issued: 'Jan 2023'
+      alt: HashiCorp Certified Terraform Associate
+      href: https://www.credly.com/earner/earned/badge/f3cbd63a-9e68-4251-bc45-1f5ce70771c9
+      issued: 'Oct 2024'

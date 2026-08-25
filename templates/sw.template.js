@@ -1,8 +1,8 @@
-// Service Worker — offline caching for static resume site
+// Service Worker: offline caching for static resume site
 // Generated at build time by scripts/fingerprint.js
 const CACHE_NAME = '{{CACHE_NAME}}';
 
-// Fingerprinted assets are immutable — safe to cache forever
+// Fingerprinted assets are immutable, safe to cache forever
 const IMMUTABLE_ASSETS = ['{{CSS_BUNDLE}}', '{{JS_BUNDLE}}'];
 
 // Non-fingerprinted assets use stale-while-revalidate
