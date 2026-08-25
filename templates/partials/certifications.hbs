@@ -4,14 +4,24 @@
   <div class="cert-grid">
     {{#each certifications}}
     {{#each certs}}
+    {{#if href}}
     <a href="{{safeUrl href}}" target="_blank" rel="noopener noreferrer" class="certification-item">
-      <img src="{{image}}" alt="" loading="lazy" class="certification-logo" />
+      {{#if image}}<img src="{{image}}" alt="" loading="lazy" class="certification-logo" />{{/if}}
       <div class="certification-content">
         <span class="certification-title">{{title}}</span>
         <span class="certification-date">{{t "issued"}} {{dateRange issued}}</span>
       </div>
       <span class="certification-link-icon" aria-hidden="true">↗</span>
     </a>
+    {{else}}
+    <div class="certification-item certification-item-nolink">
+      {{#if image}}<img src="{{image}}" alt="" loading="lazy" class="certification-logo" />{{/if}}
+      <div class="certification-content">
+        <span class="certification-title">{{title}}</span>
+        <span class="certification-date">{{t "issued"}} {{dateRange issued}}</span>
+      </div>
+    </div>
+    {{/if}}
     {{/each}}
     {{/each}}
   </div>

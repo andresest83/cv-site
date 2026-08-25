@@ -18,6 +18,12 @@
       alt: AWS Certified Developer, Associate
       issued: 'Jun 2026'
 
+    # Retired by AWS, so there is no renewal path and no current holder anywhere.
+    # Earned in 2023 and listed on its own terms.
+    - title: 'AWS Certified Data Analytics - Specialty'
+      alt: AWS Certified Data Analytics, Specialty
+      issued: '2023'
+
 - group: HashiCorp
   cssClass: cert-other
   certs:
