@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{hero.profile.name}} - {{hero.profile.title}}</title>
+    <title>{{#if hero.profile.seoTitle}}{{hero.profile.seoTitle}}{{else}}{{hero.profile.name}} - {{hero.profile.title}}{{/if}}</title>
     <meta
       name="description"
       content="{{t "metaDescription"}}"
     />
-    <meta property="og:title" content="{{hero.profile.name}} — {{hero.profile.title}}" />
+    <meta property="og:title" content="{{hero.profile.name}}, {{hero.profile.title}}" />
     <meta
       property="og:description"
       content="{{t "ogDescription"}}"
@@ -18,7 +18,7 @@
     <meta property="og:locale" content="{{i18n.lang}}" />
     <meta property="og:image" content="{{hero.profile.photo.webp}}" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="{{hero.profile.name}} — {{hero.profile.title}}" />
+    <meta name="twitter:title" content="{{hero.profile.name}}, {{hero.profile.title}}" />
     <meta
       name="twitter:description"
       content="{{t "ogDescription"}}"
@@ -31,7 +31,7 @@
     <link rel="canonical" href="{{site.baseUrl}}/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style>
-      /* Critical CSS — auto-extracted from source (do not edit manually) */
+      /* Critical CSS: auto-extracted from source (do not edit manually) */
       @media (prefers-color-scheme:dark){:root:not([data-theme='light']){--primary-color:var(--dark-primary-color);--primary-hover:var(--dark-primary-hover);--primary-light:var(--dark-primary-light);--secondary-color:var(--dark-secondary-color);--text-primary:var(--dark-text-primary);--text-secondary:var(--dark-text-secondary);--text-tertiary:var(--dark-text-tertiary);--gradient-primary-color:var(--dark-gradient-primary);--gradient-secondary-color:var(--dark-gradient-secondary);--bg-primary:var(--dark-bg-primary);--bg-secondary:var(--dark-bg-secondary);--bg-hover:var(--dark-bg-hover);--border-color:var(--dark-border-color);--border-hover:var(--dark-border-hover);--shadow-color:var(--dark-shadow-color);--shadow-primary:var(--dark-shadow-primary);--shadow-primary-lg:var(--dark-shadow-primary-lg);--shadow-primary-sm:var(--dark-shadow-primary-sm)}}
     </style>
     <link rel="stylesheet" href="/styles.min.css" />
@@ -93,6 +93,7 @@
           <div class="hero-text">
             <h1 class="hero-name">{{hero.profile.name}}</h1>
             <p class="hero-title">{{hero.profile.title}}</p>
+            {{#if hero.profile.credentials}}<p class="hero-credentials">{{hero.profile.credentials}}</p>{{/if}}
             <address class="hero-contact">
             <p class="hero-location">
               <a href="{{safeUrl hero.profile.location.url}}" target="_blank" rel="noopener noreferrer" class="hero-location-link">
@@ -126,16 +127,13 @@
         <div class="languages-bar">
           {{#each hero.languages}}
           {{#if certUrl}}
-          <a href="{{safeUrl certUrl}}" target="_blank" rel="noopener noreferrer" class="language-item language-item-link" aria-label="{{name}} — {{level}} (view certificate)">
+          <a href="{{safeUrl certUrl}}" target="_blank" rel="noopener noreferrer" class="language-item language-item-link" aria-label="{{name}}, {{level}} (view certificate)">
           {{else}}
           <div class="language-item">
           {{/if}}
             <div class="language-info">
               <span class="language-name">{{name}}</span>
               <span class="language-level">{{level}}{{#if certUrl}} <span class="lang-link-icon">↗</span>{{/if}}</span>
-            </div>
-            <div class="language-bar" role="progressbar" aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100" aria-label="{{name}}, {{percent}}% — {{level}}">
-              <div class="language-progress" style="width: {{percent}}%"></div>
             </div>
           {{#if certUrl}}
           </a>
@@ -165,7 +163,7 @@
           <p class="cv-footer-text">
             {{{t "footerText"}}}
             <a href="{{safeUrl hero.cvDownloadUrl}}" target="_blank" rel="noopener noreferrer">{{t "footerDownload"}}</a>.
-            {{t "footerCredly"}} <a href="{{safeUrl site.credlyProfileUrl}}" target="_blank" rel="noopener noreferrer">Credly</a>.
+            {{#if site.credlyProfileUrl}}{{t "footerCredly"}} <a href="{{safeUrl site.credlyProfileUrl}}" target="_blank" rel="noopener noreferrer">Credly</a>.{{/if}}
           </p>
         </footer>
       </main>
