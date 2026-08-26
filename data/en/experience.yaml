@@ -45,10 +45,6 @@ singles:
         the team lead, and sequenced with the account-owning teams across the
         estate.
       - >-
-        Recovered a Transit Gateway Resource Access Manager share in one hour
-        using terraform import and a targeted apply, reconciling state without
-        rebuilding shared network infrastructure.
-      - >-
         Ran DevOps for a commercial-vehicle manufacturer's hub-and-spoke data
         lake and RAG platform: AWS CDK and GitLab CI/CD, Lake Formation
         cross-account data sharing, and clearing every AWS Security Hub finding
@@ -121,15 +117,15 @@ singles:
         months of that engagement: client sprint reviews, task prioritisation
         across the AWS team, and the technical bridge between AWS and the client
         on the project's progress. On site in Barcelona for requirements
-        gathering and planning with the client's programme manager, and hands-on
-        troubleshooting of a client engineer's access to the platform.
+        gathering and planning with the client's programme manager.
       - >-
         Covestro Deutschland AG, the German polymers manufacturer. Data
         Architect on the Serverless Data Lake Framework (SDLF), migrating
         Tableau prep-flows to AWS Glue (PySpark). AWS later published the
         DataZone data mesh built on that foundation as a customer case study.
-        Also built a GitLab pipeline for an ML-powered document and
-        order-processing workload.
+      - >-
+        Built a GitLab pipeline for an ML-powered document and order-processing
+        workload.
       - >-
         acierto.com (Spain). Built a Terraform observability stack for EKS on
         Fargate: ADOT, kube metrics and events, X-Ray, and CloudWatch dashboards
