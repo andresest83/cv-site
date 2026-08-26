@@ -98,7 +98,7 @@
             <p class="hero-location">
               <a href="{{safeUrl hero.profile.location.url}}" target="_blank" rel="noopener noreferrer" class="hero-location-link">
                 {{hero.profile.location.text}}
-              </a>
+              </a>{{#if hero.profile.nationality}}<span class="hero-nationality"> | {{hero.profile.nationality}}</span>{{/if}}
             </p>
             </address>
             <div class="print-contact">
