@@ -142,6 +142,7 @@ const heroSchema = {
         title: { type: 'string', required: true },
         credentials: { type: 'string', required: false },
         seoTitle: { type: 'string', required: false },
+        nationality: { type: 'string', required: false },
         photo: {
           type: 'object',
           required: false,

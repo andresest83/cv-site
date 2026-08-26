@@ -14,6 +14,7 @@ profile:
     city: Berlin
     country: DE
     url: 'https://www.openstreetmap.org/?mlat=52.520008&mlon=13.404954#map=13/52.520008/13.404954'
+  nationality: Colombian / German dual national
 
 social:
   - href: 'mailto:andrespra@gmail.com'

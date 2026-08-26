@@ -65,9 +65,16 @@ function validateData(data) {
 // Load i18n strings
 const i18n = i18nRaw[locale] || i18nRaw[defaultLocale];
 
-// Compute altLangUrl based on defaultLocale (override static value in YAML)
-if (i18n.altLang) {
+// Compute altLangUrl based on defaultLocale (override static value in YAML).
+// Only when that locale is actually in the build: offering a switch to a page
+// that was never generated sends visitors to a 404.
+const builtLocales = Array.isArray(i18nRaw.locales)
+  ? i18nRaw.locales
+  : [defaultLocale];
+if (i18n.altLang && builtLocales.includes(i18n.altLang)) {
   i18n.altLangUrl = i18n.altLang === defaultLocale ? '/' : `/${i18n.altLang}/`;
+} else {
+  delete i18n.altLangUrl;
 }
 
 const data = {
