@@ -49,9 +49,61 @@ jobs:
       - name: E2E tests
         run: npm run test:e2e
 
-  # Deploy is added in phase 3 (ci/cloudflare-workers).
+      - name: Generate CV PDF
+        run: npm run pdf
+
+      - name: Upload built site
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          retention-days: 7
+          if-no-files-found: error
+
+  # Publishes to Cloudflare Workers Static Assets.
   #
-  # Upstream's deploy job checked out the author's private data repo over an SSH
-  # deploy key and pushed to Cloudflare Pages. Neither applies here: content lives
-  # in this repo, and the site runs on Workers Static Assets. Removed rather than
-  # carried, so CI has no dependency on another person's repository.
+  # Deploys the artifact built and tested above rather than rebuilding, so what
+  # reaches production is byte-for-byte what passed the suite, PDF included.
+  #
+  # wrangler.jsonc deliberately carries no `routes` block. The custom domain
+  # cv.andresestupinan.dev was attached by hand in the dashboard and Cloudflare
+  # owns the DNS record, so this job never touches DNS or routes and the token
+  # needs only two account-scoped permissions.
+  deploy:
+    needs: build-and-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://cv.andresestupinan.dev
+    concurrency:
+      group: deploy-production
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist
+
+      - name: Deploy to Cloudflare Workers
+        run: npx --yes wrangler@4.120.0 deploy
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+      # The custom domain is dashboard-managed. A deploy with no `routes` in
+      # config should leave it attached; this fails the run loudly if it ever
+      # does not, rather than leaving the domain quietly detached.
+      - name: Verify the custom domain still serves
+        run: |
+          for i in 1 2 3 4 5; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' https://cv.andresestupinan.dev)
+            echo "attempt $i: HTTP $code"
+            [ "$code" = "200" ] && exit 0
+            sleep 10
+          done
+          echo "::error::cv.andresestupinan.dev did not return 200 after deploy"
+          exit 1
