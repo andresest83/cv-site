@@ -19,6 +19,7 @@
     "test:e2e": "node --test tests/e2e.test.js",
     "test:all": "npm test && npm run test:unit && npm run test:e2e",
     "validate": "npx html-validate dist/index.html",
+    "pdf": "node scripts/generate-pdf.js",
     "prepare": "husky"
   },
   "devDependencies": {
