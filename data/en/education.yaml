@@ -5,10 +5,10 @@ singles:
     title: 'M.Sc. Information Systems Management'
     description: >-
       Thesis: Analysis of modern blockchain networks using graph databases.
-      Cited in two peer-reviewed works, including the IEEE International
-      Conference on Blockchain 2022.
+      Cited in two peer-reviewed works, including the 2022 IEEE International
+      Conference on Blockchain.
     links:
-      - label: Read the thesis
+      - label: Thesis on ResearchGate
         url: https://www.researchgate.net/publication/352212089_Analysis_of_modern_blockchain_networks_using_graph_databases
 
   - institution: Universidad Distrital Francisco José de Caldas
@@ -19,4 +19,4 @@ singles:
   - institution: Universidad Industrial de Santander
     date: '2001 - 2008'
     location: Bucaramanga, Colombia
-    title: 'B.Sc. Systems Engineering'
+    title: 'B.Sc. Computer Science'

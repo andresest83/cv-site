@@ -28,6 +28,16 @@
         {{#if location}}
         <span class="education-location">{{location}}</span>
         {{/if}}
+        {{#if description}}
+        <p class="education-description">{{description}}</p>
+        {{/if}}
+        {{#if links}}
+        <ul class="project-links" aria-label="Related links">
+          {{#each links}}
+          <li><a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="{{linkIcon url}}"></i> {{label}}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
       </div>
     </div>
     {{/each}}
