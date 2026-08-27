@@ -1,0 +1,22 @@
+projects:
+  - title: KubunDictate
+    description: >-
+      Self-hosted speech-to-text service. Whisper stays resident in GPU VRAM on a
+      home server, and any client on the local network transcribes against it.
+      Replaced a paid SaaS subscription.
+    url: https://github.com/andresest83/kubundictate
+
+  - title: Kubun Notes
+    description: >-
+      Android app for taking notes from physical books without marking them:
+      photograph a page, OCR turns it into selectable text. Dictation runs on
+      whisper.cpp entirely on the device, so audio never leaves the phone.
+      Currently in closed testing.
+    url: https://notes.kubun.live
+
+  - title: Kubun Translate
+    description: >-
+      Prototype for face-to-face translation. The screen splits in two with the
+      far half rotated 180 degrees, so the person opposite reads upright. Chains
+      Deepgram speech-to-text, DeepL translation and InWorld speech synthesis.
+    url: https://translate.kubun.live

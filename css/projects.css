@@ -37,10 +37,6 @@
 
 /* Print */
 @media print {
-  #projects {
-    display: none !important;
-  }
-
   .projects-list {
     gap: 2pt;
   }

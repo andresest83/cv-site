@@ -44,6 +44,8 @@ nav:
     text: Summary
   - href: '#experience'
     text: Experience
+  - href: '#projects'
+    text: Projects
   - href: '#education'
     text: Education
   - href: '#skills'
