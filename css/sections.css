@@ -49,14 +49,14 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.55rem;
+  font-weight: 750;
   margin-bottom: 1.25rem;
   color: var(--text-primary);
   position: relative;
-  padding-bottom: 0.75rem;
-  letter-spacing: 0.01em;
-  line-height: 1.3;
+  padding-bottom: 0.65rem;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
 }
 
 .section-title::after {
@@ -64,16 +64,18 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 80px;
+  width: 44px;
   height: 3px;
+  border-radius: 2px;
   background: var(--primary-color);
 }
 
 .section-text {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  margin-bottom: 0.75rem;
-  line-height: 1.7;
+  margin-bottom: 0.85rem;
+  line-height: 1.72;
+  letter-spacing: -0.005em;
 }
 
 /* Core Qualifications */

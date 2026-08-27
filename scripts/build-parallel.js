@@ -93,10 +93,11 @@ async function build() {
       [
         // Copy only what's needed (no full vendor tree)
         'cp assets/favicon.svg assets/robots.txt assets/sitemap.xml dist/',
-        'mkdir -p dist/vendor/fontawesome/css dist/vendor/fontawesome/webfonts dist/files',
+        'mkdir -p dist/vendor/fontawesome/css dist/vendor/fontawesome/webfonts dist/vendor/fonts dist/files',
         'cp vendor/fontawesome/css/all.min.css dist/vendor/fontawesome/css/',
         'cp vendor/fontawesome/webfonts/fa-solid-900.woff2 dist/vendor/fontawesome/webfonts/',
         'cp vendor/fontawesome/webfonts/fa-brands-400.woff2 dist/vendor/fontawesome/webfonts/',
+        'cp -r vendor/fonts/* dist/vendor/fonts/ 2>/dev/null || true',
         `cp -r ${IMAGES_DIR} dist/images`,
         'npx svgo dist/favicon.svg --quiet',
         // Copy private assets (llms.txt, robots.txt) — overrides public defaults

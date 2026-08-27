@@ -59,11 +59,11 @@
 
 /* Skill category color-coding */
 .skill-category.color-blue .skill-tag {
-  background: #eff6ff;
-  color: #1e40af;
+  background: #f0f4fa;
+  color: #0f2b5c;
 }
 .skill-category.color-blue .skill-tag:hover {
-  background: #2563eb;
+  background: #0f2b5c;
   color: white;
 }
 
@@ -124,7 +124,7 @@
 /* Dark mode skill tag overrides */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) .skill-category.color-blue .skill-tag {
-    background: #1f3570;
+    background: #172554;
     color: #93c5fd;
   }
   :root:not([data-theme='light']) .skill-category.color-purple .skill-tag {
@@ -154,7 +154,7 @@
 }
 
 [data-theme='dark'] .skill-category.color-blue .skill-tag {
-  background: #1f3570;
+  background: #172554;
   color: #93c5fd;
 }
 [data-theme='dark'] .skill-category.color-purple .skill-tag {
@@ -212,7 +212,7 @@
 
 .skills-search-box:focus-within {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 3px var(--shadow-primary-sm);
 }
 
 .skills-search-box i.fa-search {
