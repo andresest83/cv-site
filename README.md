@@ -31,8 +31,9 @@ The CV _content_ was rebuilt with
 **Kevin Burns**, MIT licensed. Two skills did that work: `cv-evidence-base`, which
 interrogates a career for the evidence that never reached the page and grades it against
 role archetypes rather than job titles, and `cv-and-human`, which tailors the result and
-checks that it survives an applicant tracking system. Most of what the YAML now says
-exists because those skills asked better questions than a blank page does.
+checks that it survives an applicant tracking system. Most of what the Experience section
+now says had been true for years and had simply never been written down. Those skills are
+what got it out.
 
 Neither skill is vendored here. They shaped the content, not the code, so this is
 acknowledgement rather than a licence obligation.
