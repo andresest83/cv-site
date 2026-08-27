@@ -15,4 +15,6 @@ extend-exclude = [
     "vendor/**",
     "data/de/**",
     "data/i18n.yaml",
+    "css/fonts.css",
+    "scripts/download-fonts.js",
 ]

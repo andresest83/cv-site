@@ -5,51 +5,55 @@
 }
 
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #3b82f6;
-  --primary-light: #60a5fa;
-  --secondary-color: #1e40af;
-  --text-primary: #1f2937;
-  --text-secondary: #4b5563;
-  --text-tertiary: #374151;
+  --primary-color: #0f2b5c;
+  --primary-hover: #1e40af;
+  --primary-light: #3b82f6;
+  --secondary-color: #1e293b;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
   --gradient-primary-color: #acd68b;
   --gradient-secondary-color: #6db56d;
-  --language-gradient-start: #8b5cf6;
-  --language-gradient-end: #6366f1;
+  --language-gradient-start: #1e3a8a;
+  --language-gradient-end: #0f2b5c;
   --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-hover: #f3f4f6;
-  --border-color: #e5e7eb;
-  --border-hover: #d1d5db;
-  --shadow-color: rgba(0, 0, 0, 0.08);
-  --shadow-primary: rgba(37, 99, 235, 0.3);
-  --shadow-primary-lg: rgba(37, 99, 235, 0.4);
-  --shadow-primary-sm: rgba(59, 130, 246, 0.15);
+  --bg-secondary: #f8fafc;
+  --bg-hover: #f1f5f9;
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --shadow-color: rgba(15, 23, 42, 0.06);
+  --shadow-primary: rgba(15, 43, 92, 0.2);
+  --shadow-primary-lg: rgba(15, 43, 92, 0.3);
+  --shadow-primary-sm: rgba(15, 43, 92, 0.08);
   --sidebar-width: 320px;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, 'BlinkMacSystemFont',
+    'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Menlo',
+    'Monaco', 'Consolas', monospace;
   --transition: all 0.3s ease;
   color-scheme: light dark;
 
   /* Dark theme palette — defined once as --dark-* properties.
      Both [data-theme='dark'] and the prefers-color-scheme fallback
      reference these, so color values live in one place only. */
-  --dark-primary-color: #3b82f6;
-  --dark-primary-hover: #60a5fa;
-  --dark-primary-light: #93c5fd;
-  --dark-secondary-color: #60a5fa;
-  --dark-text-primary: #f3f4f6;
-  --dark-text-secondary: #d1d5db;
-  --dark-text-tertiary: #e5e7eb;
+  --dark-primary-color: #60a5fa;
+  --dark-primary-hover: #93c5fd;
+  --dark-primary-light: #bfdbfe;
+  --dark-secondary-color: #93c5fd;
+  --dark-text-primary: #f8fafc;
+  --dark-text-secondary: #cbd5e1;
+  --dark-text-tertiary: #94a3b8;
   --dark-gradient-primary: #86efac;
   --dark-gradient-secondary: #4ade80;
-  --dark-bg-primary: #1f2937;
-  --dark-bg-secondary: #111827;
-  --dark-bg-hover: #374151;
-  --dark-border-color: #374151;
-  --dark-border-hover: #4b5563;
-  --dark-shadow-color: rgba(0, 0, 0, 0.3);
-  --dark-shadow-primary: rgba(59, 130, 246, 0.3);
-  --dark-shadow-primary-lg: rgba(59, 130, 246, 0.4);
-  --dark-shadow-primary-sm: rgba(59, 130, 246, 0.2);
+  --dark-bg-primary: #0f172a;
+  --dark-bg-secondary: #0b0f19;
+  --dark-bg-hover: #1e293b;
+  --dark-border-color: #1e293b;
+  --dark-border-hover: #334155;
+  --dark-shadow-color: rgba(0, 0, 0, 0.5);
+  --dark-shadow-primary: rgba(96, 165, 250, 0.25);
+  --dark-shadow-primary-lg: rgba(96, 165, 250, 0.35);
+  --dark-shadow-primary-sm: rgba(96, 165, 250, 0.15);
 }
 
 /* Dark theme overrides — shared between explicit toggle and system preference.
@@ -101,9 +105,10 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-sans);
   line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: var(--text-primary);
   background: var(--bg-secondary);
 }
