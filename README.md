@@ -1,6 +1,6 @@
 # cv.andresestupinan.dev
 
-Personal CV site for Andrés Estupiñán — Senior AWS DevOps Engineer, Berlin.
+Personal CV site for Andrés Estupiñán, Senior AWS DevOps Engineer, Berlin.
 
 Live at **<https://cv.andresestupinan.dev>**.
 
@@ -24,7 +24,18 @@ git fetch upstream
 ```
 
 Changes here are content, styling, and a Cloudflare Workers deployment. See
-[LICENSE](./LICENSE) — both copyright lines are retained.
+[LICENSE](./LICENSE): both copyright lines are retained.
+
+The CV _content_ was rebuilt with
+**[kevin-burns/claude-skills](https://github.com/kevin-burns/claude-skills)** by
+**Kevin Burns**, MIT licensed. Two skills did that work: `cv-evidence-base`, which
+interrogates a career for the evidence that never reached the page and grades it against
+role archetypes rather than job titles, and `cv-and-human`, which tailors the result and
+checks that it survives an applicant tracking system. Most of what the YAML now says
+exists because those skills asked better questions than a blank page does.
+
+Neither skill is vendored here. They shaped the content, not the code, so this is
+acknowledgement rather than a licence obligation.
 
 ## Architecture
 
@@ -46,7 +57,7 @@ template is a design change, not a content change.
 
 ## Development
 
-Node 22.16.0 — see `.nvmrc`.
+Node 22.16.0, see `.nvmrc`.
 
 ```sh
 nvm use
@@ -68,7 +79,7 @@ npm run dev        # build once, serve on localhost:3000
 Font subsetting needs `pyftsubset` (`pip install fonttools brotli`). Without it the build
 still succeeds, using full fonts.
 
-Commit hooks run through `uvx prek` — install [uv](https://docs.astral.sh/uv/) or commits
+Commit hooks run through `uvx prek`, so install [uv](https://docs.astral.sh/uv/) or commits
 will fail. Commit messages follow
 [Conventional Commits](https://www.conventionalcommits.org/), enforced by commitlint.
 
@@ -86,5 +97,5 @@ Account-level permissions and means CI never touches DNS.
 
 MIT. See [LICENSE](./LICENSE).
 
-CV content — text, photograph, and the generated PDF — is not covered by the MIT licence
+CV content (text, photograph, and the generated PDF) is not covered by the MIT licence
 and remains © Andrés Estupiñán.
