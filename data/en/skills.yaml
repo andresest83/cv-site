@@ -41,6 +41,7 @@
     - Bash
     - PowerShell
     - SQL
+    - API Integration
 
 - title: Data and AI
   icon: fa-solid fa-brain
@@ -50,8 +51,14 @@
     - PySpark
     - Apache Iceberg
     - Retrieval-Augmented Generation (RAG)
+    - Whisper / whisper.cpp
+    - Speech-to-Text (STT)
+    - Text-to-Speech (TTS)
     - vLLM
     - MLflow
-    - Trino / Starburst
+    - Blockchain
+    - Ethereum
+    - Neo4j
+    - JanusGraph
     - Grafana
     - AWS Budgets and Cost Explorer

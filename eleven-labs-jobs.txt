@@ -1,0 +1,262 @@
+1. Engineering - Internal AI Transformation
+Department
+Engineering & Product
+LocationRemoteUnited StatesDublinSofiaGermanyPortugalWarsawSwedenItalyPolandUnited KingdomAmsterdamCanadaBerlin
+Employment type
+Full time
+About the role
+Application
+About ElevenLabs
+ElevenLabs is an AI research and product company transforming how we interact with technology.
+
+We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $11B - multiples of 11, always.
+
+We have expanded from voice into three main platforms:
+
+ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.
+
+ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.
+
+ElevenAPI gives developers access to our leading AI audio foundational models.
+
+Everything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.
+
+How we work
+High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.
+
+Impact not job titles: We don’t have job titles. Instead, it’s about the impact you have. No task is above or beneath you.
+
+AI first: We use AI to move faster with higher-quality results. We do this across the whole company—from engineering to growth to operations.
+
+Excellence everywhere: Everything we do should match the quality of our AI models.
+
+Global team: We prioritize your talent, not your location.
+
+What we offer
+Innovative culture: You’ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what’s possible.
+
+Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.
+
+Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.
+
+Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.
+
+Annual company offsite: Each year, we bring the entire team together in a new location - past offsites have included Croatia and Italy.
+
+Co-working: If you’re not located near one of our main hubs, we offer a monthly co-working stipend.
+
+The role / impact
+As an Internal AI Engineer at ElevenLabs, you'll be embedded at the frontier of how we scale - acting as a forward-deployed engineer across our GTM, Operations, and Finance teams. You won't just build tools; you'll co-design and ship agentic AI workflows that eliminate manual toil and fundamentally reshape how our people operate.
+
+Your impact goes beyond the code. You'll own high-stakes automations from discovery to production, acting as a technical partner to internal teams. The patterns, guardrails, and tooling you define will become the blueprint other teams reach for - the standard for how ElevenLabs harnesses AI safely and at speed.
+
+The team / how we work
+You'll join a lean, high-velocity team with a shared obsession: turning broken, manual processes into elegant automated systems. We move fast through rapid experimentation, work closely with operators and business owners to uncover the real problem, and ship pragmatic solutions without waiting for perfect specs.
+
+What you'll actually be working on
+
+Designing and iterating on AI agents and workflow orchestrations using tools like ElevenAgents, Claude, and n8n.
+
+Integrating AI systems with our core business stack - Salesforce, Slack, Ashby, and more
+
+Building reusable automation services, patterns and shared templates that multiply the output of every team you touch
+
+Owning experiments end-to-end: spotting the opportunity, building the solution, and measuring the impact
+
+Developing evaluation and monitoring frameworks so our AI-native workflows are reliable, auditable, and safe
+
+
+What we're looking for
+
+Proven experience building and shipping automations or applications in production - you know what it takes to go from fuzzy business pain to something real teams depend on
+
+AI-First Instincts: Strong familiarity with LLM capabilities, prompting strategies, RAG patterns, and a genuine passion for building agentic workflows.
+
+Deep Backend Expertise : Strong Python and SQL and system design patterns (APIs, webhooks, orchestration layers)
+
+A systems-thinking mindset : you design with security, auditability, and blast radius in mind from the start
+
+Builder and AI-First instincts: you don't wait to be told what to build - you spot the pattern, propose the fix, and ship it.
+
+Infra & DevOps Instincts: Hands-on experience operating cloud infrastructure (GCP preferred), Kubernetes, Docker, and enterprise authentication flows
+
+Location
+This role is remote and can be executed globally. If you prefer, you can work from our offices in London, New York, San Francisco, and Warsaw. Specific teams may have specific location preferences.
+
+#LI-Remote
+
+We are an equal opportunity employer and do not discriminate on the basis of race, religion, national origin, gender, sexual orientation, age, veteran status, disability or other legally protected statuses.
+
+
+------------------------------
+
+2. Deployment Strategist - Germany
+Department
+Engineering & Product
+LocationRemoteGermany
+Employment type
+Full time
+About the role
+Application
+About ElevenLabs
+ElevenLabs is an AI research and product company transforming how we interact with technology.
+
+We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $11B - multiples of 11, always.
+
+We have expanded from voice into three main platforms:
+
+ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.
+
+ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.
+
+ElevenAPI gives developers access to our leading AI audio foundational models.
+
+Everything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.
+
+How we work
+High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.
+
+Impact not job titles: We don’t have job titles. Instead, it’s about the impact you have. No task is above or beneath you.
+
+AI first: We use AI to move faster with higher-quality results. We do this across the whole company—from engineering to growth to operations.
+
+Excellence everywhere: Everything we do should match the quality of our AI models.
+
+Global team: We prioritize your talent, not your location.
+
+What we offer
+Innovative culture: You’ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what’s possible.
+
+Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.
+
+Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.
+
+Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.
+
+Annual company offsite: Each year, we bring the entire team together in a new location - past offsites have included Croatia and Italy.
+
+Co-working: If you’re not located near one of our main hubs, we offer a monthly co-working stipend.
+
+About the role
+As a Forward Deployed Engineer Strategist, you'll work as part of a driven and creative team of Engineers, Product Designers, and other Strategists to deploy our voice AI technology against the most challenging problems our customers face. Your mission is to synthesize disconnected streams of thought into a cohesive understanding of what the most important problem is, what the data means, what the product needs, what users are motivated by, and where the impact could be.
+
+No two days are the same, but as a FDE Strategist you can expect to:
+
+Meet with strategic customers to understand their critical audio and voice AI needs and locate their biggest pain points.
+
+Identify relevant use cases through deep engagement with customer problems and workflows, and work with Engineers to implement our voice and audio AI technology into innovative solutions.
+
+Design and architect bespoke integrations for customers, ensuring our technology fits seamlessly into their products and operations.
+
+Guide customers on best practices for implementing our voice and audio AI models to maximize their effectiveness.
+
+Present the results of our work and proposals for future work to audiences ranging from technical teams to C-suite executives.
+
+Collaborate with our Research and Product teams to incorporate field insights into ElevenLabs' software products and AI models.
+
+Build and deliver compelling demos of our voice and audio AI technology to new and existing customers.
+
+Scope out potential applications in new industries and expand our AI solutions across different sectors globally.
+
+Take full ownership of end-to-end execution of major projects for our most strategic partners, working hands-on to deliver high-impact solutions.
+
+Collaborate daily with our customers' engineering and executive teams to ensure optimal implementation of ElevenLabs' technologies.
+
+Requirements
+Experience working with customers in a technical capacity. It's ok if you only worked with customers in student clubs or side projects, as long as you are interested in working closely with them.
+
+Basic proficiency in Python and understanding of API integration to implement scripts and help with prototyping/demo building.
+
+Excellent communication and problem-solving skills, especially in terms of ability to summarize complex technical concepts and using logic in pursuing optimal solutions.
+
+A proven track record of taking ownership of complex projects and delivering results.
+
+Adaptability to work across different customer environments and technical use cases.
+
+Technical aptitude to quickly understand our voice and audio AI models and their applications.
+
+Location
+This role is remote-first, so it can be executed from anywhere in Germany, with a preference of Berlin. Expect regular travel for customer onsites. Fluency in English and German and a deep understanding of the regional and cultural nuances is required.
+
+#LI-Remote
+
+We are an equal opportunity employer and do not discriminate on the basis of race, religion, national origin, gender, sexual orientation, age, veteran status, disability or other legally protected statuses.
+
+-------------------------------
+
+3. Forward Deployed Engineer - Software Engineer - Germany
+Department
+Engineering & Product
+LocationRemoteGermany
+Employment type
+Full time
+About the role
+Application
+About ElevenLabs
+ElevenLabs is an AI research and product company transforming how we interact with technology.
+
+We launched in January 2023 with the first human-like AI voice model. Today, we serve millions of users and thousands of businesses - from fast-growing startups to large enterprises like Deutsche Telekom and Meta. Our investors are some of the world's most prominent, including Andreessen Horowitz, ICONIQ Growth and Sequoia. We've raised $781M in funding and our last valuation was $11B - multiples of 11, always.
+
+We have expanded from voice into three main platforms:
+
+ElevenAgents enables businesses to deliver seamless and intelligent customer experiences, with the integrations, testing, monitoring, and reliability necessary to deploy voice and chat agents at scale.
+
+ElevenCreative empowers creators and marketers to generate and edit speech, music, image, and video across 70+ languages.
+
+ElevenAPI gives developers access to our leading AI audio foundational models.
+
+Everything we do is the result of the creativity and commitment of our team - builders doing the best work of their lives. We are researchers, engineers, and operators. IOI medalists and ex-founders. If you want to work hard and create lasting positive impact, we want to hear from you.
+
+How we work
+High-velocity: Rapid experimentation, lean autonomous teams, and minimal bureaucracy.
+
+Impact not job titles: We don’t have job titles. Instead, it’s about the impact you have. No task is above or beneath you.
+
+AI first: We use AI to move faster with higher-quality results. We do this across the whole company—from engineering to growth to operations.
+
+Excellence everywhere: Everything we do should match the quality of our AI models.
+
+Global team: We prioritize your talent, not your location.
+
+What we offer
+Innovative culture: You’ll be part of a generational opportunity to define the trajectory of AI, surrounded by a team pushing the boundaries of what’s possible.
+
+Growth paths: Joining ElevenLabs means joining a dynamic team with countless opportunities to drive impact - beyond your immediate role and responsibilities.
+
+Learning & development: ElevenLabs proactively supports professional development through an annual discretionary stipend.
+
+Social travel: We also provide an annual discretionary stipend to meet up with colleagues each year, however you choose.
+
+Annual company offsite: Each year, we bring the entire team together in a new location - past offsites have included Croatia and Italy.
+
+Co-working: If you’re not located near one of our main hubs, we offer a monthly co-working stipend.
+
+About the role
+
+You’ll use your creativity, problem-solving, and technical expertise to design tailored solutions that make a real impact.
+
+Embedded with our most strategic customers, you’ll get a front-row seat to some of our highest-stakes projects. From brainstorming technical architectures and product features to building full-scale integrations, you’ll take full ownership of complex, high-impact challenges—helping clients achieve their goals and push the limits of what’s possible.
+
+What you will do:
+
+Take full ownership of end-to-end execution of major projects for our most strategic partners, working hands-on to deliver high-impact solutions.
+
+Collaborate daily with our customer’s engineers and executives teams to ensure the best use of ElevenLabs’ technologies.
+
+Drive real innovation by using your coding and technical skills to solve complex problems, making a real difference for our customers.
+
+
+Requirements
+Experience working with customers. It’s ok if you only worked with customers in student clubs or side projects, as long as you are interested in working closely with them on a technical capacity
+
+Proficiency in Python and strong software development knowledge, inclusive of a deep understanding of software development, software architecture, and APIs integration.
+
+Excellent communication and problem-solving skills. Especially in terms of ability to summarize complex technical knowledge and using logic in pursuing optimal solutions.
+
+Location
+
+This role is remote-first, so it can be executed from anywhere in Germany, however there is a preference for candidates to be based out of Berlin. Fluency in English and German and a deep understanding of the regional and cultural nuances is required.
+
+#LI-remote
+
+We are an equal opportunity employer and do not discriminate on the basis of race, religion, national origin, gender, sexual orientation, age, veteran status, disability or other legally protected statuses.
