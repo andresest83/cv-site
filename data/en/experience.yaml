@@ -22,39 +22,32 @@ singles:
     results:
       - >-
         Run platform engineering across six AWS projects for an automotive
-        group, entirely in Terraform: migrated every repository from GitLab to
-        GitHub, built a single Grafana dashboard aggregating metrics from all
-        six, and delivered security-posture work with the client security team
-        including an IAM pipeline.
+        group, entirely in Terraform pipelines running on GitLab/GitHub. Supported
+        the migration of the workloads from GitLab to GitHub and built a unified
+        Grafana dashboard aggregating metrics from all six, including a Bedrock AI
+        RAG system. Also delivered security-posture work with the client security
+        team to bring two projects from DEV to PROD.
       - >-
         Built an end-to-end GenAI data platform for a premium automotive
         manufacturer: a Glue and PySpark ETL pipeline consolidating
         production-line data into an Apache Iceberg lakehouse, fronted by an
         agentic assistant on Amazon Bedrock querying Athena through a Converse
-        API tool-use loop. Production-line staff who write no code now ask in
-        natural language instead of queueing behind the one engineer who could
-        query the underlying Oracle database. The assistant returns the SQL it
-        generated, so a harder question can be passed straight to an engineer to
-        extend. Engagement delivered in German.
+        API. Production-line staff who write no code now ask in natural language
+        instead of queueing behind the one engineer who could query the
+        underlying Oracle database. The assistant returns the SQL it generated, so
+        a harder question can be passed straight to an engineer to extend.
+        Engagement delivered entirely in German.
       - >-
         Migrated 42 of a logistics and shipping enterprise's most critical AWS
         accounts to a standardized Terragrunt and GitLab CI/CD model in a
         KRITIS-regulated environment, including the Shared Transit Gateway that
-        all ~350 accounts in the estate route through. Assigned as the team's
-        most experienced engineer, after earlier work on that account alongside
-        the team lead, and sequenced with the account-owning teams across the
-        estate.
+        all ~350 accounts in the estate route through.
       - >-
         Ran DevOps for a commercial-vehicle manufacturer's hub-and-spoke data
         lake and RAG platform: AWS CDK and GitLab CI/CD, Lake Formation
         cross-account data sharing, and clearing every AWS Security Hub finding
-        on the hosting account, the gate a vLLM-based Retrieval-Augmented
-        Generation (RAG) workload had to pass to reach production.
-      - >-
-        Delivered centralized Grafana observability across five production
-        workloads in an automotive Run Office, including a Bedrock AI toolbox,
-        and automated AWS Budgets provisioning in Lambda on two separate
-        engagements, replacing per-project manual configuration.
+        on the hosting account of a vLLM-based Retrieval-Augmented Generation
+        (RAG) workload.
 
   - company: MHP - A Porsche Company
     date: 'Nov 2024 - May 2025'
@@ -113,27 +106,26 @@ singles:
         marketplace in AWS CDK and Python: inter-region VPC peering, Amazon
         SageMaker, Redshift Serverless and MLflow.
       - >-
-        Led the AWS Professional Services delivery team for the final three
-        months of that engagement: client sprint reviews, task prioritisation
-        across the AWS team, and the technical bridge between AWS and the client
-        on the project's progress. On site in Barcelona for requirements
-        gathering and planning with the client's programme manager.
+        In this project also led the AWS Professional Services delivery team for
+        the final three months of the engagement: client sprint reviews, task
+        prioritisation across the AWS team, and the technical bridge between AWS
+        and the client on the project's progress.
       - >-
-        Covestro Deutschland AG, the German polymers manufacturer. Data
-        Architect on the Serverless Data Lake Framework (SDLF), migrating
-        Tableau prep-flows to AWS Glue (PySpark). AWS later published the
-        DataZone data mesh built on that foundation as a customer case study.
+        Covestro Deutschland AG. Data Architect on the Serverless Data Lake
+        Framework (SDLF), migrating Tableau prep-flows to AWS Glue (PySpark). AWS
+        later published the DataZone data mesh built on that foundation as a
+        customer case study.
       - >-
         Built a GitLab pipeline for an ML-powered document and order-processing
-        workload.
+        workload for a company in the Chemicals Manufacturing sector.
       - >-
         acierto.com (Spain). Built a Terraform observability stack for EKS on
         Fargate: ADOT, kube metrics and events, X-Ray, and CloudWatch dashboards
         generated in Python. Presented the project outcomes on site in Barcelona
-        to the client's whole company.
+        at the clients' biannual on-site meeting.
       - >-
         Built Terraform pipelines for EKS with security scanning (TFSec) in
-        CodeBuild for a bank in Abu Dhabi, and automated cluster tooling
+        CodeBuild for a mobile bank in Abu Dhabi, and automated cluster tooling
         installation with Helm charts.
       - >-
         Built multi-account VPC and Transit Gateway automation with advanced AWS
@@ -155,14 +147,17 @@ singles:
       - >-
         Implemented an automated AMI customization pipeline for Windows Server
         with Packer and GitLab, after solving the Packer-to-Windows-EC2
-        connection problem that had blocked the team.
+        connection problem that had blocked this automation for the team. This
+        served as a foundation for an article written later for the AWS Blog Post.
       - >-
-        Managed the AWS backend (EC2, Auto Scaling, ELB, RDS, CloudWatch) of the
-        point-of-sale system running on mobile devices across the entire ICE
-        high-speed train fleet.
+        Responsible for the production and new releases via GitLab of the AWS
+        backend (EC2, Auto Scaling, ELB, RDS, CloudWatch) of the point-of-sale
+        system running on mobile devices across the entire ICE high-speed train
+        fleet.
       - >-
-        Orchestrated release roll-outs across test and production environments
-        via GitLab. Engagement delivered in German.
+        Supported release roll-outs across test and production environments via
+        GitLab for different projects. Engagement delivered in German and
+        participated in on-call rotation.
 
 earlyCareer:
   - date: 'Jul 2018 - Mar 2020'
@@ -178,8 +173,7 @@ earlyCareer:
     company: bonify
     location: Berlin, Germany
     description: >-
-      Active Directory, Windows Server and pfSense administration; on-premises
-      virtualization with Hyper-V; implemented the Microsoft BI stack.
+      Active Directory, Windows Server, and pfSense administration; on-premises server virtualization with Hyper-V. Implemented the Microsoft BI stack (Power BI cloud service + Power BI Gateway + on-premises MSSQL/SSIS).
 
   - date: 'Feb 2012 - Feb 2016'
     title: Software Implementation Specialist
