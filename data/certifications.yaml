@@ -1,4 +1,7 @@
-- group: AWS
+# Rendered as a flat grid in file order, two per row on desktop. The `group` key
+# is required by the schema but never displayed, so the list is ordered by
+# relevance to the roles being targeted, not by vendor.
+- group: Certifications
   cssClass: cert-aws
   certs:
     - title: 'AWS Certified Generative AI Developer - Professional'
@@ -10,6 +13,11 @@
       image: /images/certs/aws-ml-engineer-associate.webp
       alt: AWS Certified Machine Learning Engineer, Associate
       issued: 'Mar 2026'
+
+    - title: 'NVIDIA Certified Associate: AI Infrastructure and Operations'
+      image: /images/certs/nvidia-ai-infrastructure-operations-associate.webp
+      alt: NVIDIA Certified Associate, AI Infrastructure and Operations
+      issued: 'Sep 2026'
 
     - title: 'AWS Certified Developer - Associate'
       image: /images/certs/aws-developer-associate.webp
@@ -23,9 +31,6 @@
       alt: AWS Certified Data Analytics, Specialty
       issued: '2023'
 
-- group: HashiCorp
-  cssClass: cert-other
-  certs:
     - title: 'HashiCorp Certified: Terraform Associate (003)'
       image: /images/certs/terraform_associate.webp
       alt: HashiCorp Certified Terraform Associate
