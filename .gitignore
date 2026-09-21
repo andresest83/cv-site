@@ -271,3 +271,7 @@ files/
 
 # Kiro IDE configuration
 .kiro/
+
+# Job postings and other search material. Workspace only, never the repo.
+*-jobs.txt
+job-postings/
