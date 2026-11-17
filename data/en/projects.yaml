@@ -1,4 +1,12 @@
 projects:
+  - title: AskCarlJung
+    description: >-
+      RAG system over C. G. Jung's books that answers only from his texts, cites
+      book, chapter and real author, and refuses when the answer isn't there.
+      Runs locally (Ollama, Postgres/pgvector, Docker). A golden set of 41
+      questions measures retrieval quality (hit@5 0.95, MRR 0.89), and an n8n
+      workflow runs the eval and alerts on Telegram when quality drops.
+
   - title: KubunDictate
     description: >-
       Self-hosted speech-to-text service. Whisper stays resident in GPU VRAM on a
@@ -11,7 +19,7 @@ projects:
       Android app for taking notes from physical books without marking them:
       photograph a page, OCR turns it into selectable text. Dictation runs on
       whisper.cpp entirely on the device, so audio never leaves the phone.
-      Currently in closed testing.
+      Submitted for release on Google Play.
     url: https://notes.kubun.live
 
   - title: Kubun Translate
