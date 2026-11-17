@@ -5,7 +5,7 @@
   {{#if projects.community}}<h3 class="projects-subsection-title">{{t "projectsList"}}</h3>{{/if}}
   <ul class="projects-list">
     {{#each projects.projects}}
-    <li><a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="{{linkIcon url}}"></i> {{title}}</a><span class="project-desc">: {{description}}</span></li>
+    <li>{{#if url}}<a href="{{url}}" target="_blank" rel="noopener noreferrer"><i class="{{linkIcon url}}"></i> {{title}}</a>{{else}}<span class="project-title">{{title}}</span>{{/if}}<span class="project-desc">: {{description}}</span></li>
     {{/each}}
   </ul>
 

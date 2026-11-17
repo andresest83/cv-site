@@ -41,7 +41,9 @@ singles:
         Migrated 42 of a logistics and shipping enterprise's most critical AWS
         accounts to a standardized Terragrunt and GitLab CI/CD model in a
         KRITIS-regulated environment, including the Shared Transit Gateway that
-        all ~350 accounts in the estate route through.
+        all ~350 accounts in the estate route through. Used an AI coding agent
+        to drive the repetitive conversion, with a human review gate and a clean
+        Terraform plan as the bar for every repository.
       - >-
         Ran DevOps for a commercial-vehicle manufacturer's hub-and-spoke data
         lake and RAG platform: AWS CDK and GitLab CI/CD, Lake Formation
@@ -116,8 +118,11 @@ singles:
         later published the DataZone data mesh built on that foundation as a
         customer case study.
       - >-
-        Built a GitLab pipeline for an ML-powered document and order-processing
-        workload for a company in the Chemicals Manufacturing sector.
+        Built the AWS CDK and GitLab CI/CD platform for a data science team at a
+        company in the Chemicals Manufacturing sector: SageMaker Studio in a
+        private VPC with no internet access (VPC endpoints only), plus an
+        event-driven S3, Step Functions, Textract and DynamoDB pipeline for
+        document and order processing.
       - >-
         acierto.com (Spain). Built a Terraform observability stack for EKS on
         Fargate: ADOT, kube metrics and events, X-Ray, and CloudWatch dashboards

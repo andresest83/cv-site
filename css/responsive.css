@@ -771,7 +771,8 @@
     content: none !important;
   }
 
-  a {
+  a,
+  .project-title {
     color: #000 !important;
     text-decoration: none !important;
   }

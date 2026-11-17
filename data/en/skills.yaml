@@ -39,9 +39,21 @@
     - Helm
     - Python
     - Bash
+    - Linux
+    - Docker
     - PowerShell
     - SQL
     - API Integration
+
+- title: Observability
+  icon: fa-solid fa-chart-line
+  color: amber
+  featured: true
+  tags:
+    - Grafana
+    - OpenTelemetry (ADOT)
+    - AWS X-Ray
+    - Amazon CloudWatch
 
 - title: Data and AI
   icon: fa-solid fa-brain
@@ -60,5 +72,7 @@
     - Ethereum
     - Neo4j
     - JanusGraph
-    - Grafana
+    - Ollama
+    - pgvector
+    - n8n
     - AWS Budgets and Cost Explorer
