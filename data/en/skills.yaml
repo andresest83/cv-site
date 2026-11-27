@@ -4,6 +4,7 @@
   featured: true
   tags:
     - AWS
+    - Google Cloud
     - Terraform
     - Terragrunt
     - AWS CDK
@@ -62,6 +63,7 @@
   tags:
     - PySpark
     - Apache Iceberg
+    - BigQuery
     - Retrieval-Augmented Generation (RAG)
     - Whisper / whisper.cpp
     - Speech-to-Text (STT)

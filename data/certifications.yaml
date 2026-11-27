@@ -19,6 +19,11 @@
       alt: NVIDIA Certified Associate, AI Infrastructure and Operations
       issued: 'Sep 2026'
 
+    - title: 'Google Cloud Certified - Associate Data Practitioner'
+      image: /images/certs/google-cloud-associate-data-practitioner.webp
+      alt: Google Cloud Certified Associate Data Practitioner
+      issued: 'Nov 2026'
+
     - title: 'AWS Certified Developer - Associate'
       image: /images/certs/aws-developer-associate.webp
       alt: AWS Certified Developer, Associate
