@@ -1,6 +1,7 @@
 # Rendered as a flat grid in file order, two per row on desktop. The `group` key
-# is required by the schema but never displayed, so the list is ordered by
-# relevance to the roles being targeted, not by vendor.
+# is required by the schema but never displayed, so file order is the page
+# order: all AWS credentials first (most senior first), then one each from
+# NVIDIA, Google Cloud and HashiCorp.
 - group: Certifications
   cssClass: cert-aws
   certs:
@@ -14,16 +15,6 @@
       alt: AWS Certified Machine Learning Engineer, Associate
       issued: 'Mar 2026'
 
-    - title: 'NVIDIA Certified Associate: AI Infrastructure and Operations'
-      image: /images/certs/nvidia-ai-infrastructure-operations-associate.webp
-      alt: NVIDIA Certified Associate, AI Infrastructure and Operations
-      issued: 'Sep 2026'
-
-    - title: 'Google Cloud Certified - Associate Data Practitioner'
-      image: /images/certs/google-cloud-associate-data-practitioner.webp
-      alt: Google Cloud Certified Associate Data Practitioner
-      issued: 'Nov 2026'
-
     - title: 'AWS Certified Developer - Associate'
       image: /images/certs/aws-developer-associate.webp
       alt: AWS Certified Developer, Associate
@@ -35,6 +26,16 @@
       image: /images/certs/aws-data-analytics-specialty.webp
       alt: AWS Certified Data Analytics, Specialty
       issued: '2023'
+
+    - title: 'NVIDIA Certified Associate: AI Infrastructure and Operations'
+      image: /images/certs/nvidia-ai-infrastructure-operations-associate.webp
+      alt: NVIDIA Certified Associate, AI Infrastructure and Operations
+      issued: 'Sep 2026'
+
+    - title: 'Google Cloud Certified - Associate Data Practitioner'
+      image: /images/certs/google-cloud-associate-data-practitioner.webp
+      alt: Google Cloud Certified Associate Data Practitioner
+      issued: 'Nov 2026'
 
     - title: 'HashiCorp Certified: Terraform Associate (003)'
       image: /images/certs/terraform_associate.webp
